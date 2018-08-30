@@ -15,7 +15,9 @@ const PlantList = (props) => {
         <p>{plant.plantSpecies}</p>
         <p>{plant.plantType}</p>
         <p>Watering Frequency: {plant.plantWaterFreq}</p>
-        <p>{plant.plantCare}</p>
+        <p>Water Amount: {plant.plantWaterQuant}</p>
+        <p>Sun exposure: {plant.plantSunshine}</p>
+        <p>Additional plant care: {plant.plantCare}</p>
 
         <button onClick={() =>props.killPlant(plant.key)} id={plant.key}>RIP Plant</button>
         </div>

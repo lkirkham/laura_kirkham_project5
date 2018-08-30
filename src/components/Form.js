@@ -10,6 +10,8 @@ constructor() {
     plantSpecies: '',
     plantType: '',
     plantWaterFreq: '',
+    plantWaterQuant: '',
+    plantSunshine: '',
     plantCare: '',
   }
 }
@@ -31,7 +33,7 @@ handleSubmit = (e) => {
   //prevent the page from refreshing
   e.preventDefault();
 
-  this.props.addPlantToDatabase(this.state.plantName, this.state.plantSpecies, this.state.plantType, this.state.plantWaterFreq, this.state.plantCare);
+  this.props.addPlantToDatabase(this.state.plantName, this.state.plantSpecies, this.state.plantType, this.state.plantWaterFreq, this.state.plantWaterQuant, this.state.plantSunshine, this.state.plantCare);
 
   // resetting the form values to be empty strings
   this.setState({
@@ -39,6 +41,8 @@ handleSubmit = (e) => {
     plantSpecies: '',
     plantType: '',
     plantWaterFreq: '',
+    plantWaterQuant: '',
+    plantSunshine: '',
     plantCare: '',
   });
 }
@@ -57,10 +61,12 @@ handleSubmit = (e) => {
       <label htmlFor="plantSpecies">Species</label>
       <input onChange={this.handleChange} id="plantSpecies" type="text" placeholder="Ie. Monstera Deliciosa" value={this.state.plantSpecies} />
       
-      {/* <div id="filesubmit">
+      <p>Plant Selfie</p>
+      <div id="filesubmit">
        <input type="file" class="file-select" accept="image/*"/>
-      </div> */}
-
+      </div>
+      
+       <p>Plant Type</p>
       <fieldset id="plantTypeRadio">
       <input onChange={this.handleRadioChange} name="plantType" id="plantTypeTropical" type="radio"  value="Tropical"/>
       <label htmlFor="plantTypeTropical">Tropical</label>
@@ -74,21 +80,39 @@ handleSubmit = (e) => {
       <label htmlFor="plantTypeHerb">Herb</label>
       </fieldset>
 
+       <p>Watering Frequency</p>
       <fieldset id="plantWaterFreqRadio">
       <input onChange={this.handleRadioChange} name="plantWaterFreq" id="plantWaterFreqDaily" type="radio"  value="Daily"/>
       <label htmlFor="plantWaterFreqDaily">Daily</label>
       <input onChange={this.handleRadioChange} name="plantWaterFreq" id="plantWaterFreqEveryOtherDay" type="radio"  value="Every other day"/>
-      <label htmlFor="plantWaterFreqEveryOtherDay">Every Other Day</label>
+      <label htmlFor="plantWaterFreqEveryOtherDay">Every other day</label>
       <input onChange={this.handleRadioChange} name="plantWaterFreq" id="plantWaterFreqTwiceWeekly" type="radio" value="Twice weekly" />
-      <label htmlFor="plantWaterFreqTwiceWeekly">Twice Weekly</label>
+      <label htmlFor="plantWaterFreqTwiceWeekly">Twice weekly</label>
       <input onChange={this.handleRadioChange} name="plantWaterFreq" id="plantWaterFreqWeekly" type="radio" value="Weekly"/>
       <label htmlFor="plantWaterFreqWeekly">Weekly</label>
       <input onChange={this.handleRadioChange} name="plantWaterFreq" id="plantWaterFreqEveryOtherWeek" type="radio" value="Every other week"/>
-      <label htmlFor="plantWaterFreqEveryOtherWeek">Every Other Week</label>
+      <label htmlFor="plantWaterFreqEveryOtherWeek">Every other week</label>
       <input onChange={this.handleRadioChange} name="plantWaterFreq" id="plantWaterFreqEveryThreeWeeks" type="radio" value="Every three weeks"/>
-      <label htmlFor="plantWaterFreqEveryThreeWeeks">Every Three Weeks</label>
+      <label htmlFor="plantWaterFreqEveryThreeWeeks">Every three weeks</label>
       <input onChange={this.handleRadioChange} name="plantWaterFreq" id="plantWaterFreqMonthly" type="radio" value="Monthly"/>
       <label htmlFor="plantWaterFreqMonthly">Monthly</label>
+      </fieldset>
+
+      <label htmlFor="plantSpecies">Water Quantity</label>
+      <input onChange={this.handleChange} id="plantWaterQuant" type="text" placeholder="Ie. 'Full Soak' or '1oz'" value={this.state.plantWaterQuant} />
+      
+       <p>Sun Exposure</p>
+      <fieldset id="plantWaterAmountRadio">
+      <input onChange={this.handleRadioChange} name="plantSunshine" id="plantSunshineBrightLight" type="radio"  value="Bright light"/>
+      < label htmlFor = "plantSunshineBrightLight" > Bright light </label>
+      <input onChange={this.handleRadioChange} name="plantSunshine" id="plantSunshineIndirectLight" type="radio"  value="Indirect light"/>
+      < label htmlFor = "plantSunshineIndirectLight" > Indirect light </label>
+      <input onChange={this.handleRadioChange} name="plantSunshine" id="plantSunshineDappledLight" type="radio" value="Dappled light" />
+      < label htmlFor = "plantSunshineDappledLight" > Dappled light </label>
+      <input onChange={this.handleRadioChange} name="plantSunshine" id="plantSunshinePartialLight" type="radio"  value="Partial light"/>
+      < label htmlFor = "plantSunshinePartialLight" > Partial light </label>
+      <input onChange={this.handleRadioChange} name="plantSunshine" id="plantSunshineLowLight" type="radio" value="Low light"/>
+      < label htmlFor = "plantSunshineLowLight" > Low light </label>
       </fieldset>
 
 

@@ -1,7 +1,7 @@
 // Plant Parenthood
 
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 
 //import our CONFIGURED firebase module
 import firebase from './components/firebase';
@@ -41,6 +41,8 @@ class App extends Component {
           plantSpecies: item[1].plantSpecies,
           plantType: item[1].plantType,
           plantWaterFreq: item[1].plantWaterFreq,
+          plantWaterQuant: item[1].plantWaterQuant,
+          plantSunshine: item[1].plantSunshine,
           plantCare: item[1].plantCare,
         })
       })
@@ -51,13 +53,15 @@ class App extends Component {
   })
 }
 
-  addPlantToDatabase = (name, species, type, freq, care) => {
+  addPlantToDatabase = (name, species, type, freq, quant, sun, care) => {
     // console.log(name, species, type, care);
     dbRef.push({
       plantName: name,
       plantSpecies: species,
       plantType: type,
       plantWaterFreq: freq,
+      plantWaterQuant: quant,
+      plantSunshine: sun,
       plantCare: care,
     })
   }
