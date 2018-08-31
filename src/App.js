@@ -9,6 +9,7 @@ import firebase from './components/firebase';
 // COMPONENTS
 import Form from "./components/Form"
 import PlantList from "./components/PlantLibrary"
+import Nav from "./components/Nav"
 
 //create reference to the firebase database root
 const dbRef = firebase.database().ref();
@@ -18,6 +19,8 @@ class App extends Component {
     super();
     this.state = {
       plantList: [],
+      // isModalOpen: false;
+      //logged in... will also go here.
     }
   }
 
@@ -39,6 +42,7 @@ class App extends Component {
           key: item[0],
           plantName: item[1].plantName,
           plantSpecies: item[1].plantSpecies,
+          // plantImage: item[1].plantImage,
           plantType: item[1].plantType,
           plantWaterFreq: item[1].plantWaterFreq,
           plantWaterQuant: item[1].plantWaterQuant,
@@ -53,11 +57,12 @@ class App extends Component {
   })
 }
 
-  addPlantToDatabase = (name, species, type, freq, quant, sun, care) => {
+  addPlantToDatabase = (name, species, /*img,*/ type, freq, quant, sun, care) => {
     // console.log(name, species, type, care);
     dbRef.push({
       plantName: name,
       plantSpecies: species,
+      // plantImage: img,
       plantType: type,
       plantWaterFreq: freq,
       plantWaterQuant: quant,
@@ -80,6 +85,7 @@ class App extends Component {
   render() {
     return (
       <div className = "App" >
+      <Nav />
       <h1>Plant Parenthood</h1> 
       <Form addPlantToDatabase = {this.addPlantToDatabase} />
       <PlantList listOfPlants={this.state.plantList} killPlant={this.killPlant} />

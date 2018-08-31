@@ -1,6 +1,9 @@
 //Plant Parenthood
 import React, { Component } from 'react';
 
+//import our CONFIGURED firebase module
+import firebase from './firebase';
+
 class Form extends Component {
 //creating the original state / template
 constructor() {
@@ -8,6 +11,7 @@ constructor() {
   this.state = {
     plantName: '',
     plantSpecies: '',
+    // plantImage: '',
     plantType: '',
     plantWaterFreq: '',
     plantWaterQuant: '',
@@ -28,17 +32,41 @@ handleRadioChange = (e)=> {
   })
 }
 
+handleImageChange = (e) => {
+e.preventDefault();
+let file = e.target.files[0];
+console.log(file);
+}
+
 
 handleSubmit = (e) => {
   //prevent the page from refreshing
   e.preventDefault();
 
-  this.props.addPlantToDatabase(this.state.plantName, this.state.plantSpecies, this.state.plantType, this.state.plantWaterFreq, this.state.plantWaterQuant, this.state.plantSunshine, this.state.plantCare);
+  //image upload and url download
+  const storageRef = firebase.storage().ref()
+  const plantPhoto = storageRef.child(this.state.plantImage.name);
+  console.log(plantPhoto)
+
+    plantPhoto.put(this.state.plantImage).then(function (snapshot) {
+      console.log(snapshot);
+      plantPhoto.getDownloadURL().then((url) => {
+      let plantUrl = url;
+    console.log(plantUrl)
+    // this.setState({
+    //   plantImage: plantUrl,
+    // })
+    })
+    		})
+  //image upload and url download
+
+  this.props.addPlantToDatabase(this.state.plantName, this.state.plantSpecies, /*this.state.plantImage,*/ this.state.plantType, this.state.plantWaterFreq, this.state.plantWaterQuant, this.state.plantSunshine, this.state.plantCare);
 
   // resetting the form values to be empty strings
   this.setState({
     plantName: '',
     plantSpecies: '',
+    // plantImage: '',
     plantType: '',
     plantWaterFreq: '',
     plantWaterQuant: '',
@@ -62,9 +90,7 @@ handleSubmit = (e) => {
       <input onChange={this.handleChange} id="plantSpecies" type="text" placeholder="Ie. Monstera Deliciosa" value={this.state.plantSpecies} />
       
       <p>Plant Selfie</p>
-      <div id="filesubmit">
-       <input type="file" class="file-select" accept="image/*"/>
-      </div>
+      <input name="plantImage" /*value={this.state.plantUrl}*/ onChange={this.handleImageChange} id="plantImage" type="file" accept="image/*"/>
       
        <p>Plant Type</p>
       <fieldset id="plantTypeRadio">

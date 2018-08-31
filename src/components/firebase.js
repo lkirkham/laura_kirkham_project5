@@ -13,6 +13,10 @@ var config = {
 };
 firebase.initializeApp(config);
 
+// // Create a root reference
+// const storageService = firebase.storage();
+// //Specific database and root file location where things get uploaded.
+// const storageRef = storageService.ref();
 
 // this exports the CONFIGURED version of firebase
 export default firebase;
