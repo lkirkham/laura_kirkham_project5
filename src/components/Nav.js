@@ -6,7 +6,7 @@ class Nav extends Component {
     return(
     <nav className="mainNavigation">
       <ul>
-        <li><button class="trigger">Add</button></li>
+        <li><button className="trigger">Add</button></li>
         <li>Learn</li>
       </ul>
     </nav>

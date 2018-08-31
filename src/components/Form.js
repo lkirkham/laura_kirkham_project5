@@ -11,7 +11,7 @@ constructor() {
   this.state = {
     plantName: '',
     plantSpecies: '',
-    // plantImage: '',
+    plantImage: '',
     plantType: '',
     plantWaterFreq: '',
     plantWaterQuant: '',
@@ -35,6 +35,10 @@ handleRadioChange = (e)=> {
 handleImageChange = (e) => {
 e.preventDefault();
 let file = e.target.files[0];
+
+this.setState({
+  plantImage: file,
+})
 console.log(file);
 }
 
@@ -44,35 +48,48 @@ handleSubmit = (e) => {
   e.preventDefault();
 
   //image upload and url download
-  const storageRef = firebase.storage().ref()
-  const plantPhoto = storageRef.child(this.state.plantImage.name);
-  console.log(plantPhoto)
 
+  //define where the photo is going
+  const storageRef = firebase.storage().ref()   ; 
+  // const plantPhoto = storageRef.child(this.state.plantImage.name);
+  console.log(this.state.plantImage);
+  const plantPhoto = storageRef.child(this.state.plantImage.name);
+  console.log('HELLO', plantPhoto)
+  const self = this;
+
+
+    //upload plant photo to firebase
     plantPhoto.put(this.state.plantImage).then(function (snapshot) {
       console.log(snapshot);
+
+      //get download url
       plantPhoto.getDownloadURL().then((url) => {
       let plantUrl = url;
-    console.log(plantUrl)
-    // this.setState({
-    //   plantImage: plantUrl,
-    // })
-    })
-    		})
+
+    console.log(plantUrl, this)
+    self.setState({
+      plantImage: plantUrl,
+    }, () => {
+      self.props.addPlantToDatabase(self.state.plantName, self.state.plantSpecies, self.state.plantImage, self.state.plantType, self.state.plantWaterFreq, self.state.plantWaterQuant, self.state.plantSunshine, self.state.plantCare);
+    }) //closes set state
+    })//closes getDownloadURL
+        })//closes .then (function (snapshot))
+        
   //image upload and url download
 
-  this.props.addPlantToDatabase(this.state.plantName, this.state.plantSpecies, /*this.state.plantImage,*/ this.state.plantType, this.state.plantWaterFreq, this.state.plantWaterQuant, this.state.plantSunshine, this.state.plantCare);
+  
 
   // resetting the form values to be empty strings
-  this.setState({
-    plantName: '',
-    plantSpecies: '',
-    // plantImage: '',
-    plantType: '',
-    plantWaterFreq: '',
-    plantWaterQuant: '',
-    plantSunshine: '',
-    plantCare: '',
-  });
+  // this.setState({
+  //   plantName: '',
+  //   plantSpecies: '',
+  //   plantImage: '',
+  //   plantType: '',
+  //   plantWaterFreq: '',
+  //   plantWaterQuant: '',
+  //   plantSunshine: '',
+  //   plantCare: '',
+  // });
 }
 
 
@@ -145,7 +162,7 @@ handleSubmit = (e) => {
 
       <label htmlFor="plantCare">Care Notes</label>
       {/* <input onChange={this.handleChange} id="plantCare" type="text" placeholder="Enter up to 150 characters." value={this.state.plantCare} /> */}
-      <textarea onChange={this.handleChange} id="plantCare" type="text" placeholder="Enter up to 200 characters." value={this.state.plantCare} maxlength="150" rows="4" cols="50">
+      <textarea onChange={this.handleChange} id="plantCare" type="text" placeholder="Enter up to 200 characters." value={this.state.plantCare} maxLength="150" rows="4" cols="50">
       </textarea>
 
 
