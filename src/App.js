@@ -2,14 +2,19 @@
 
 import React, { Component } from 'react';
 import './styles/App.css';
+import smoothscroll from 'smoothscroll-polyfill';
+
 
 //import our CONFIGURED firebase module
 import firebase from './components/firebase';
 
 // COMPONENTS
 import Form from "./components/Form"
-import PlantList from "./components/PlantLibrary"
-import Nav from "./components/Nav"
+import PlantList from "./components/PlantLibrary";
+import Nav from "./components/Nav";
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 //create reference to the firebase database root
 const dbRef = firebase.database().ref();
@@ -19,9 +24,26 @@ class App extends Component {
     super();
     this.state = {
       plantList: [],
-      // isModalOpen: false;
-      //logged in... will also go here.
+      isModalOpen: false,
     }
+  }
+
+  openModal = (e) => {
+    console.log(this)
+    this.setState({
+  	  isModalOpen: true
+    });
+    
+  }
+  
+  closeModal = (e) => {
+  	this.setState({
+  	  isModalOpen: false
+  	})
+  }
+
+  backToTop = (e) => {
+  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 
   componentDidMount() {
@@ -55,6 +77,8 @@ class App extends Component {
   this.setState({
     plantList: plantsArray
   })
+
+
 }
 
   addPlantToDatabase = (name, species, img, type, freq, quant, sun, care) => {
@@ -72,6 +96,7 @@ class App extends Component {
     })
   }
 
+
   killPlant = (plantId) => {
     // console.log('delete/kill plant called');
     //delete from firebase
@@ -85,14 +110,18 @@ class App extends Component {
 
   render() {
     return (
+      
       <div className = "App" >
-      <Nav />
-      <h1>Plant Parenthood</h1> 
-      <Form addPlantToDatabase={this.addPlantToDatabase} />
+
+      <Nav openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} backToTop={this.backToTop}/>
+      <h1>Plant Parenthood</h1>
+      <Form addPlantToDatabase={this.addPlantToDatabase} openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} />
       <PlantList listOfPlants={this.state.plantList} killPlant={this.killPlant} />
       </div>
     );
   }
 }
+
+
 
 export default App;

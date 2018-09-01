@@ -13,7 +13,9 @@ const PlantList = (props) => {
         <div className="plant" key={plant.key}>
 
           <div className="leftSide">
+            <figure className="plantSelfie">
             <img src={plant.plantImage} alt={plant.plantName}/>
+            </figure>
           </div>
 
         <div className = "rightSide" >

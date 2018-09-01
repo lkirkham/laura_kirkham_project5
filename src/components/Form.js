@@ -1,8 +1,13 @@
 //Plant Parenthood
 import React, { Component } from 'react';
+import Modal from './modal.js'
+import smoothscroll from 'smoothscroll-polyfill';
 
 //import our CONFIGURED firebase module
 import firebase from './firebase';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 class Form extends Component {
 //creating the original state / template
@@ -75,21 +80,11 @@ handleSubmit = (e) => {
     })//closes getDownloadURL
         })//closes .then (function (snapshot))
         
-  //image upload and url download
 
-  
 
-  // resetting the form values to be empty strings
-  // this.setState({
-  //   plantName: '',
-  //   plantSpecies: '',
-  //   plantImage: '',
-  //   plantType: '',
-  //   plantWaterFreq: '',
-  //   plantWaterQuant: '',
-  //   plantSunshine: '',
-  //   plantCare: '',
-  // });
+    //close modal on submit after information has been passed.
+    this.props.closeModal(e)
+
 }
 
 
@@ -97,6 +92,7 @@ handleSubmit = (e) => {
   //display form on the page
   render(){
     return(
+      <Modal className='modalStyle' isOpen={this.props.isModalOpen} onClose={() => this.closeModal()}>
       <div className="formWrapper">
       <form onSubmit={this.handleSubmit}>
 
@@ -121,6 +117,8 @@ handleSubmit = (e) => {
       <label htmlFor="plantTypeTree">Tree</label>
       <input onChange={this.handleRadioChange} name="plantType" id="plantTypeHerb" type="radio" value="Herb"/>
       <label htmlFor="plantTypeHerb">Herb</label>
+      <input onChange={this.handleRadioChange} name="plantType" id="plantTypeAirPlant" type="radio" value="Air Plant"/>
+      <label htmlFor="plantTypeAirPlant">Air Plant</label>
       </fieldset>
 
        <p>Watering Frequency</p>
@@ -166,9 +164,15 @@ handleSubmit = (e) => {
       </textarea>
 
 
-      <button type="submit" value="Add Plant">Add plant</button>
+      <button id="addPlant" type="submit" value="Add Plant">Add plant</button>
+      	<button onClick={(e) => {
+								e.preventDefault();
+								this.props.closeModal()
+							}
+						}>Close Window</button>
       </form>
       </div>
+      </Modal>
     )
 
   }
