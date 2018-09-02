@@ -39,6 +39,7 @@ form {
   margin-bottom: 100px; }
 
 .plantSelfie {
+  margin: 0;
   max-width: 150px;
   height: 200px; }
 
@@ -48,10 +49,11 @@ img {
   object-fit: cover; }
 
 /* card flip starts */
-#plantCard {
+.plant {
   position: relative;
   width: 500px;
-  height: 300px;
+  height: 200px;
+  margin-bottom: 25px;
   z-index: 1;
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
@@ -76,7 +78,7 @@ img {
   color: #A52D2D;
   font-weight: 400; }
 
-#plantCard.flip .cardFront {
+.plant.flip .cardFront {
   z-index: 900;
   -webkit-transform: rotateY(180deg);
   -mox-transform: rotateY(180deg);
@@ -95,28 +97,13 @@ img {
   text-align: center;
   background-color: #E9F0F1;
   border: 8px solid #97BDC4;
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
-  -webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-#plantCard.flip .cardBack {
+.plant.flip .cardBack {
   z-index: 1000;
-  -webkit-transform: rotateX(0deg) rotateY(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg);
-  -o-transform: rotateX(0deg) rotateY(0deg);
   transform: rotateX(0deg) rotateY(0deg); }
 
 /* card flip ends */

@@ -17,8 +17,8 @@ render(){
       return (
 
 
-        <div id="plantCard" className="plant" key={plant.key}> {/*opens plant*/}
-
+        <div id={plant.key} className="plant" key={plant.key}> {/*opens plant*/}
+{ console.log(plant.key) }
         <div className="cardFront"> {/*opens cardFrontk*/}
           <div className="leftSide">
             <figure className="plantSelfie">
@@ -32,8 +32,8 @@ render(){
           <p>{plant.plantType}</p>
           {/* original flip button styling commented out for reference */}
           {/* <button class="clickable" onClick={() =>this.props.flip()}> <i class="fas fa-chevron-circle-right"></i></button>  */}
-          <div class="clickable" onClick={() =>this.props.flip()}>
-          <i class="fas fa-chevron-circle-right"></i>
+          <div className="clickable" onClick={() =>this.props.flip(plant.key)}>
+          <i className="fas fa-chevron-circle-right"></i>
           </div>
 
 
@@ -48,8 +48,8 @@ render(){
           <p>Additional plant care: {plant.plantCare}</p>
           {/* original flip button styling commented out for reference */}
           {/* <button class="clickable" onClick={() =>this.props.flip()}> <i class="fas fa-chevron-circle-right"></i></button>  */}
-          <div class="clickable" onClick={() =>this.props.flip()}>
-          <i class="fas fa-chevron-circle-left"></i>
+          <div className="clickable" onClick={() =>this.props.flip(plant.key)}>
+          <i className="fas fa-chevron-circle-left"></i>
           </div>
           <button onClick={() =>this.props.killPlant(plant.key)} id={plant.key}>RIP Plant</button>
           </div>

@@ -115,8 +115,8 @@ class App extends Component {
     plantDbRef.remove();
   }
 
-  flip = () => {
-    document.getElementById("plantCard").classList.toggle("flip");
+  flip = (key) => {
+    document.getElementById(key).classList.toggle("flip");
   };
 
   render() {
