@@ -2,22 +2,24 @@
 
 import React, { Component } from 'react';
 import './styles/App.css';
-import smoothscroll from 'smoothscroll-polyfill';
-
+// import smoothscroll from 'smoothscroll-polyfill';
 
 //import our CONFIGURED firebase module
 import firebase from './components/firebase';
 
-// COMPONENTS
+// import components
 import Form from "./components/Form"
 import PlantList from "./components/PlantLibrary";
 import Nav from "./components/Nav";
 
-// kick off the polyfill!
-smoothscroll.polyfill();
+// kick off the polyfill! - used for back to top / smooth scrolling. 
+// smoothscroll.polyfill();
 
 //create reference to the firebase database root
 const dbRef = firebase.database().ref();
+
+
+// APP STARTS
 
 class App extends Component {
   constructor() {
@@ -25,6 +27,7 @@ class App extends Component {
     this.state = {
       plantList: [],
       isModalOpen: false,
+      // isFlipped: false,
     }
   }
 
@@ -45,6 +48,10 @@ class App extends Component {
   backToTop = (e) => {
   window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
+
+
+
+
 
   componentDidMount() {
     console.log('App componentdidmount fired')
@@ -108,15 +115,20 @@ class App extends Component {
     plantDbRef.remove();
   }
 
+  flip = () => {
+    document.getElementById("plantCard").classList.toggle("flip");
+  };
+
   render() {
     return (
       
       <div className = "App" >
 
-      <Nav openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} backToTop={this.backToTop}/>
+      {/* <Nav openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} backToTop={this.backToTop}/> */}
+      <Nav openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen}/>
       <h1>Plant Parenthood</h1>
       <Form addPlantToDatabase={this.addPlantToDatabase} openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} />
-      <PlantList listOfPlants={this.state.plantList} killPlant={this.killPlant} />
+      <PlantList listOfPlants={this.state.plantList} flip={this.flip}  killPlant={this.killPlant}/>
       </div>
     );
   }
