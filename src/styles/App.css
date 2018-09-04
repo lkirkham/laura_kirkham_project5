@@ -1,5 +1,342 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.plant {
+  position: relative;
+  width: 350px;
+  height: 230px;
+  margin-bottom: 25px;
+  z-index: 1;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px; }
+
+.plantSelfie {
+  margin: 0;
+  max-width: 150px;
+  height: 230px; }
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+/* card front  */
+.cardFront {
+  background-color: #fff;
+  text-align: left;
+  color: #4a4a4a;
+  width: inherit;
+  height: inherit;
+  z-index: 900;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .cardFront:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.plant.flip .cardFront {
+  z-index: 900;
+  -webkit-transform: rotateY(180deg);
+  -mox-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.cardFront .rightSide {
+  padding: 25px; }
+
+.plant .plantName {
+  font-size: 1.6em;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
+
+.plant .plantSpecies {
+  font-size: 1.4rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 300; }
+
+.flipForward,
+.flipBack {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  padding: 0 10px;
+  cursor: pointer; }
+  .flipForward .fas,
+  .flipBack .fas {
+    font-size: 2.5rem; }
+
+/* card front ends */
+/* card back  */
+.cardBack {
+  display: flex;
+  flex-direction: column;
+  z-index: 800;
+  margin-top: -230px;
+  width: inherit;
+  height: inherit;
+  padding: 25px;
+  color: #4a4a4a;
+  text-align: left;
+  background-color: #fff;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .cardBack:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.plant.flip .cardBack {
+  z-index: 1000;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg); }
+
+.cardBack .title,
+.plantType {
+  font-size: 1rem;
+  text-transform: uppercase; }
+
+.plantStats ul {
+  padding: 0; }
+  .plantStats ul li {
+    list-style-type: none; }
+  .plantStats ul li:nth-child(3) {
+    margin-top: 10px; }
+
+.killPlant {
+  display: flex;
+  align-items: center;
+  border: 1px solid #4a4a4a;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 2px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  cursor: pointer; }
+  .killPlant .fas {
+    font-size: 1.6rem; }
+  .killPlant p {
+    font-size: 1.2rem;
+    margin: 0 0 0 5px; }
+
+/* card back ends */
+/* card icons */
+.plant .plantStats .fas {
+  font-size: 1.8rem; }
+
+.fa-tint {
+  margin-left: 3px; }
+
+/* card icons end */
 .App {
-  text-align: center; }
+  position: relative; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  background-color: #fff; }
+
+p {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  margin: 5px 0; }
+
+fieldset {
+  border: none;
+  padding: 0; }
+
+.plantTypeRadio,
+.plantSunshineAmountRadio,
+.plantWaterFreqRadio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .plantTypeRadio div,
+  .plantSunshineAmountRadio div,
+  .plantWaterFreqRadio div {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    flex: 1 0 50%; }
+    .plantTypeRadio div input,
+    .plantSunshineAmountRadio div input,
+    .plantWaterFreqRadio div input {
+      height: 3rem;
+      width: 3rem; }
+    .plantTypeRadio div label,
+    .plantSunshineAmountRadio div label,
+    .plantWaterFreqRadio div label {
+      font-size: 1.4rem; }
 
 .mainNavigation {
   background-color: lightgreen;
@@ -18,92 +355,89 @@
       padding: 25px; }
 
 .modalStyle {
-  z-index: 50;
+  z-index: 7000;
+  height: 100vh;
   position: fixed;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 0, 0.75); }
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.modalContent {
+  width: 300px; }
 
 .formWrapper {
   margin: 0 auto;
-  max-width: 420px; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto; }
+
+.quest {
+  margin-bottom: 25px; }
 
 form {
+  margin-bottom: 150px;
+  padding: 0; }
+  form .plantName,
+  form .plantSpecies,
+  form .plantWaterQuant, form .plantCare {
+    border: 0;
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    -webkit-appearance: none;
+    border-radius: 0; }
+    form .plantName label,
+    form .plantSpecies label,
+    form .plantWaterQuant label, form .plantCare label {
+      font-size: 2rem;
+      margin-bottom: 5px; }
+    form .plantName input,
+    form .plantSpecies input,
+    form .plantWaterQuant input, form .plantCare input {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 1px solid #4a4a4a;
+      background: transparent;
+      font-size: 1.6rem; }
+    form .plantName textarea,
+    form .plantSpecies textarea,
+    form .plantWaterQuant textarea, form .plantCare textarea {
+      resize: none; }
+  form .plantTypes p, form .plantPic p,
+  form .plantWaterFreq p,
+  form .plantSunExposure p {
+    font-size: 2rem;
+    margin-bottom: 25px; }
+
+.btnContainer {
   display: flex;
-  flex-direction: column; }
+  justify-content: center; }
+
+.btn {
+  padding: 10px 25px;
+  margin: 10px;
+  flex: 1 0 calc(50% - 10px); }
+
+.btnSubmit {
+  margin-right: 10px; }
+
+.btnClose {
+  margin-left: 10px; }
 
 .plantList {
-  margin-bottom: 100px; }
-
-.plantSelfie {
-  margin: 0;
-  max-width: 150px;
-  height: 200px; }
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
-
-/* card flip starts */
-.plant {
-  position: relative;
-  width: 500px;
-  height: 200px;
-  margin-bottom: 25px;
-  z-index: 1;
-  -webkit-perspective: 600px;
-  -moz-perspective: 600px;
-  -o-perspective: 600px;
-  perspective: 600px; }
-
-.cardFront {
-  background-color: #97BDC4;
-  text-align: center;
-  color: #fff;
-  border: 2px solid #A52D2D;
-  width: inherit;
-  height: inherit;
-  z-index: 900;
-  transform: rotateX(0deg) rotateY(0deg);
-  transition: all .4s ease-in-out;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  display: flex; }
-
-.cardFront a {
-  color: #A52D2D;
-  font-weight: 400; }
-
-.plant.flip .cardFront {
-  z-index: 900;
-  -webkit-transform: rotateY(180deg);
-  -mox-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg); }
-
-.cardBack {
-  display: block;
-  z-index: 800;
-  margin-top: -300px;
-  width: inherit;
-  height: inehrit;
-  box-sizing: border-box;
-  padding: 10px;
-  color: rgba(255, 0, 0, 0.5);
-  text-align: center;
-  background-color: #E9F0F1;
-  border: 8px solid #97BDC4;
-  transform: rotateY(-180deg);
-  transition: all .4s ease-in-out;
-  transform-style: preserve-3d;
-  backface-visibility: hidden; }
-
-.plant.flip .cardBack {
-  z-index: 1000;
-  transform: rotateX(0deg) rotateY(0deg); }
-
-/* card flip ends */
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }

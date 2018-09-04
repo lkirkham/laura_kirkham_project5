@@ -1,176 +1,179 @@
+ @import "./partials/_setup.scss";
+ @import "./partials/_cards.scss";
+
  .App {
-  text-align: center;
+   position: relative;
  }
 
+ html {
+   font-size: 62.5%;
+ }
 
-// NAV
+ body {
+   font-size: 1.6rem;
+   background-color: #fff;
+ }
 
-.mainNavigation {
-  background-color:lightgreen;
-  position:fixed;
-  width:100%;
-  z-index: 60;
-  // height:50px;
-  bottom:0;
-  display:flex;
+ p {
+   font-size: 1.4rem;
+   font-family: 'Roboto', sans-serif;
+   margin: 5px 0;
+ }
+
+ fieldset {
+   border: none;
+   padding: 0;
+ }
+
+ .plantTypeRadio,
+ .plantSunshineAmountRadio,
+ .plantWaterFreqRadio {
+   display: flex;
+   flex-wrap: wrap;
    justify-content: center;
-  ul{
-    display:flex;
-    margin:0;
-    list-style-type: none;
-    justify-content: space-around;
-    li{
-      padding:25px,
-    }
-  }
-}
 
-// MODAL FORM
-.modalStyle{
-   z-index: 50;
+   div {
+     display: flex;
+     align-items: center;
+     padding-right: 15px;
+     flex: 1 0 50%;
+
+     input {
+       height: 3rem;
+       width: 3rem;
+     }
+
+     label {
+       font-size: 1.4rem;
+     }
+   }
+ }
+
+ // NAV
+ .mainNavigation {
+   background-color: lightgreen;
    position: fixed;
-   width:100%;
-   height:100%;
-   bottom:0;
-   left:0;
-   right:0;
-   background-color: rgba(255, 255, 0, 0.75);
+   width: 100%;
+   z-index: 60;
+   // height:50px;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
 
-}
+   ul {
+     display: flex;
+     margin: 0;
+     list-style-type: none;
+     justify-content: space-around;
 
-.formWrapper {
-  margin: 0 auto;
-  max-width: 420px;
-}
+     li {
+       padding: 25px,
+     }
+   }
+ }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
+ // MODAL FORM
+ .modalStyle {
+   z-index: 7000;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
 
+ .modalContent {
+   width: 300px;
+ }
 
+ .formWrapper {
+   margin: 0 auto;
+   //  max-width: 300px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: absolute;
+   width: 100%;
+   height: 100vh;
+   overflow-y: auto;
+ }
 
-// MODAL FORM ENDS
+ .quest {
+   margin-bottom: 25px;
+ }
 
-//LISTING
-.plantList {
-  margin-bottom:100px;
-}
-
-//LISTING ENDS
-
-//CARD
-
-.plantSelfie {
-  margin:0;
-  max-width: 150px;
-  height: 200px;
-
-}
-
-img {
-  width:100%;
-  height:100%;
-  // display:block;
-  object-fit: cover;
-}
-
-/* card flip starts */
-
-.plant {
-  position: relative;
-  width: 500px;
-  height: 200px;
-  margin-bottom: 25px;
-  z-index: 1;
-  -webkit-perspective: 600px;
-  -moz-perspective: 600px;
-  -o-perspective: 600px;
-  perspective: 600px;
-
-  
-}
-
-.cardFront {
-  background-color: #97BDC4;
-  text-align: center;
-  color: #fff;
-  border: 2px solid #A52D2D;
-  width: inherit;
-  height: inherit;
-  z-index: 900;
-  // -webkit-transform: rotateX(0deg) rotateY(0deg);
-  // -moz-transform: rotateX(0deg) rotateY(0deg);
-  // -o-transform: rotateX(0deg) rotateY(0deg);
-  transform: rotateX(0deg) rotateY(0deg);
-  // -webkit-transition: all .4s ease-in-out;
-  // -moz-transition: all .4s ease-in-out;
-  // -o-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  // -webkit-transform-style: preserve-3d;
-  // -moz-transform-style: preserve-3d;
-  // -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  // -webkit-backface-visibility: hidden;
-  // -moz-backface-visibility: hidden;
-  // -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-
+ form {
+   margin-bottom: 150px;
+   padding: 0;
+   .plantName,
+   .plantSpecies,
+   .plantWaterQuant, .plantCare {
+     border: 0;
+     margin-top: 25px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     font-family: 'Roboto', sans-serif;
+     -webkit-appearance: none;
+     border-radius: 0;
+     label {
+       font-size: 2rem;
+       margin-bottom:5px;
+     }
+     input {
+       border-top: none;
+       border-right: none;
+       border-left: none;
+       border-bottom: 1px solid #4a4a4a;
+       background: transparent;
+       font-size: 1.6rem;
+     }
+    textarea {
+      resize: none;
+      // border-top: none;
+      // border-right: none;
+      // border-left: none;
+      // border-bottom: 1px solid #4a4a4a;
+    }
+   }
+   .plantTypes, .plantPic,
+   .plantWaterFreq,
+   .plantSunExposure {
+     p{
+       font-size: 2rem;
+       margin-bottom:25px;
+     }
+   }
+ }
+.btnContainer{
   display:flex;
+  justify-content: center;
 }
+ .btn {
+   padding: 10px 25px;
+   margin: 10px;
+   flex: 1 0 calc(50% - 10px);
+ }
 
-.cardFront a {
-  color: #A52D2D;
-  font-weight: 400;
-}
+ .btnSubmit {
+margin-right: 10px;
+ }
+ .btnClose{
+margin-left: 10px;
+ }
 
-.plant.flip .cardFront {
-  z-index: 900;
-  -webkit-transform: rotateY(180deg);
-  -mox-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
+ // MODAL FORM ENDS
+ //LISTING
+ .plantList {
+   margin-bottom: 100px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
 
-.cardBack {
-  display: block;
-  z-index: 800;
-  margin-top: -300px;
-  width: inherit;
-  height: inehrit;
-  box-sizing: border-box;
-  padding: 10px;
-  color: rgba(255, 0, 0, 0.5);
-  text-align: center;
-  background-color: #E9F0F1;
-  border: 8px solid #97BDC4;
-  // -webkit-transform: rotateY(-180deg);
-  // -moz-transform: rotateY(-180deg);
-  // -o-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-  // -webkit-transition: all .4s ease-in-out;
-  // -moz-transition: all .4s ease-in-out;
-  // -o-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  // -webkit-transform-style: preserve-3d;
-  // -moz-transform-style: preserve-3d;
-  // -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  // -webkit-backface-visibility: hidden;
-  // -moz-backface-visibility: hidden;
-  // -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.plant.flip .cardBack {
-  z-index: 1000;
-  // -webkit-transform: rotateX(0deg) rotateY(0deg);
-  // -moz-transform: rotateX(0deg) rotateY(0deg);
-  // -o-transform: rotateX(0deg) rotateY(0deg);
-  transform: rotateX(0deg) rotateY(0deg);
-}
-
-
-/* card flip ends */
-
-//CARD ENDS
+ //LISTING ENDS

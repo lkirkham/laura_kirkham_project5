@@ -27,13 +27,13 @@ render(){
           </div>
 
         <div className = "rightSide" >
-          <h3>{plant.plantName}</h3>
-          <p>{plant.plantSpecies}</p>
-          <p>{plant.plantType}</p>
+          <h3 className="plantName">{plant.plantName}</h3>
+          <p className="plantSpecies">{plant.plantSpecies}</p>
+          <p className="plantType">{plant.plantType}</p>
           {/* original flip button styling commented out for reference */}
           {/* <button class="clickable" onClick={() =>this.props.flip()}> <i class="fas fa-chevron-circle-right"></i></button>  */}
-          <div className="clickable" onClick={() =>this.props.flip(plant.key)}>
-          <i className="fas fa-chevron-circle-right"></i>
+          <div className="clickable flipForward" onClick={() =>this.props.flip(plant.key)}>
+          <i className="fas fa-chevron-right"></i>
           </div>
 
 
@@ -41,18 +41,32 @@ render(){
         </div> {/*closes cardFront*/}
 
         <div className="cardBack"> {/*opens cardBack*/}
-        <div className="plantStats">
-          <p>Watering Frequency: {plant.plantWaterFreq}</p>
-          <p>Water Amount: {plant.plantWaterQuant}</p>
-          <p>Sun exposure: {plant.plantSunshine}</p>
-          <p>Additional plant care: {plant.plantCare}</p>
+        
+        <p className="title"> {plant.plantName} the {plant.plantSpecies}</p>
+          
+          <div className="plantStats">
+          <ul>
+          <li><p><i class="fas fa-tint"></i>&nbsp;{plant.plantWaterQuant}, {plant.plantWaterFreq}.</p></li>
+          <li><p><i class="fas fa-sun"></i> Keep me in {plant.plantSunshine}.</p></li>
+          <li><p>{plant.plantCare}</p></li>
+          </ul>
+          </div>{/*closes plantStats*/}
+          
+          
+          { /* original killPlant styling commented out for reference */ }
+          {/* <button onClick={() =>this.props.killPlant(plant.key)} id={plant.key}><i class="fas fa-skull"></i></button> */}
+          <div className="killPlant" onClick={() =>this.props.killPlant(plant.key)} id={plant.key}>
+          {/* to add toolTips class above to use the tooltip */}
+          {/* <span class="toolTipText">Delete dead plant</span> */}
+          <i className="fas fa-skull"></i><p>RIP</p>
+          </div> {/*closes killPlant */}
+
           {/* original flip button styling commented out for reference */}
           {/* <button class="clickable" onClick={() =>this.props.flip()}> <i class="fas fa-chevron-circle-right"></i></button>  */}
-          <div className="clickable" onClick={() =>this.props.flip(plant.key)}>
-          <i className="fas fa-chevron-circle-left"></i>
-          </div>
-          <button onClick={() =>this.props.killPlant(plant.key)} id={plant.key}>RIP Plant</button>
-          </div>
+          <div className="clickable flipBack" onClick={() =>this.props.flip(plant.key)}>
+           <i className="fas fa-chevron-left"></i>
+        
+          </div> {/*closes flipBack*/}
           </div>{/*closes cardBack*/}
     
           </div> /*closes plant*/
