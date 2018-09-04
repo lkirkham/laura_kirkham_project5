@@ -297,6 +297,32 @@ img {
   margin-left: 3px; }
 
 /* card icons end */
+.mainNavigation {
+  background-color: #398449;
+  position: fixed;
+  width: 100%;
+  z-index: 60;
+  bottom: 0;
+  display: flex;
+  justify-content: center; }
+  .mainNavigation ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-around; }
+    .mainNavigation ul li {
+      padding: 25px 30px; }
+
+.addPlantBtn {
+  font-size: 3rem;
+  color: white; }
+
+.logOutBtn,
+.aboutBtn {
+  color: #cccccc;
+  font-size: 3rem; }
+
 .App {
   position: relative; }
 
@@ -338,31 +364,6 @@ fieldset {
     .plantSunshineAmountRadio div label,
     .plantWaterFreqRadio div label {
       font-size: 1.4rem; }
-
-.mainNavigation {
-  background-color: #398449;
-  position: fixed;
-  width: 100%;
-  z-index: 60;
-  bottom: 0;
-  display: flex;
-  justify-content: center; }
-  .mainNavigation ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    justify-content: space-around; }
-    .mainNavigation ul li {
-      padding: 25px 30px; }
-
-.addPlantBtn {
-  font-size: 3rem;
-  color: white; }
-
-.logOutBtn, .aboutBtn {
-  color: #cccccc;
-  font-size: 3rem; }
 
 .modalStyle {
   z-index: 7000;
@@ -478,27 +479,6 @@ form {
   flex-direction: column;
   align-items: center; }
 
-/* Portrait tablet and small desktops */
-/* Landscape phone to portrait tablet */
-@media (min-width: 768px) {
-  .plantList {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-  .wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 20 auto; }
-  .plant {
-    flex: 1 0 33.333%;
-    margin-bottom: 25px; } }
-
 /* iPhone 5 / SE */
 @media (max-width: 350px) {
   .modalContent {
@@ -509,3 +489,41 @@ form {
     height: 220px; }
   .plantSelfie {
     height: 220px; } }
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 740px) {
+  .plantList {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 740px;
+    margin: 0 auto; }
+  .plant {
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px; } }
+
+/* Portrait tablet and small desktops */
+@media (min-width: 1110px) {
+  .plantList {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 1180px;
+    margin: 0 auto; }
+  .plant {
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 10px;
+    margin-bottom: 25px; } }

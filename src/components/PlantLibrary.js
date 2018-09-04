@@ -13,7 +13,6 @@ render(){
   return (
     <section className="plantList">
     <div className = "wrapper" >
-
     {this.props.listOfPlants.map( (plant) => {
       return (
 

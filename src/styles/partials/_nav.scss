@@ -1,0 +1,34 @@
+// NAV
+.mainNavigation {
+  background-color: #398449;
+  position: fixed;
+  width: 100%;
+  z-index: 60;
+  // height:50px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-around;
+
+    li {
+      padding: 25px 30px,
+    }
+  }
+}
+
+.addPlantBtn {
+  font-size: 3rem;
+  color: white;
+}
+
+.logOutBtn,
+.aboutBtn {
+  color: #cccccc;
+  font-size: 3rem;
+}

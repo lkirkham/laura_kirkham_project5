@@ -126,7 +126,10 @@ class App extends Component {
 
       {/* <Nav openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} backToTop={this.backToTop}/> */}
       <Nav openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen}/>
-      <h1>Plant Parenthood</h1>
+      {/* <h1>Plant Parenthood</h1> */}
+      <figure className="logo">
+      <img src="/assets/pplogo.png" alt=""/>
+      </figure>
       <Form addPlantToDatabase={this.addPlantToDatabase} openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} />
       <PlantList listOfPlants={this.state.plantList} flip={this.flip}  killPlant={this.killPlant}/>
       </div>

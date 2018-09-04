@@ -1,5 +1,6 @@
 @import "./partials/_setup.scss";
 @import "./partials/_cards.scss";
+@import "./partials/_nav.scss";
 
 
  .App {
@@ -50,39 +51,7 @@
    }
  }
 
- // NAV
- .mainNavigation {
-   background-color: #398449;
-   position: fixed;
-   width: 100%;
-   z-index: 60;
-   // height:50px;
-   bottom: 0;
-   display: flex;
-   justify-content: center;
-
-   ul {
-     display: flex;
-     margin: 0;
-     padding:0;
-     list-style-type: none;
-     justify-content: space-around;
-
-     li {
-       padding: 25px 30px,
-     }
-   }
- }
-
- .addPlantBtn {
-   font-size: 3rem;
-   color: white;
- }
-
-  .logOutBtn, .aboutBtn {
-    color: #cccccc;
-    font-size: 3rem;
-  }
+ 
 
  // MODAL FORM
  .modalStyle {
@@ -227,44 +196,10 @@ border: 1px solid #fff;
 /// =================================
 /// =================================
 /// =================================
+/// MEDIA QUERIES
 /// =================================
 /// =================================
 /// =================================
-/// =================================
-
- /* Portrait tablet and small desktops */
- @media (max-width: 940px) {}
-
- /* Landscape phone to portrait tablet */
- @media (min-width: 768px) {
-   .plantList {
-     width: 100%;
-    //  width: 90%;
-     margin: 0 auto;
-    //  margin-bottom: 100px;
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-    //  flex-wrap: wrap;
-    align-items: center;
-   }
-
-   .wrapper{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        width: 80%;
-        margin: 20 auto;
-   }
-
-   .plant {
-     flex: 1 0 33.333%;
-    // margin-right: 25px;
-    // margin: 15px;
-     margin-bottom: 25px;
-   }
- }
 
  /* iPhone 5 / SE */
  @media (max-width: 350px) {
@@ -282,3 +217,56 @@ border: 1px solid #fff;
      height: 220px;
    }
  }
+
+ /* Landscape phone to portrait tablet */
+ @media (min-width: 740px) {
+   .plantList {
+     width: 100%;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+   }
+
+   .wrapper {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     flex-wrap: wrap;
+     width: 740px;
+     margin: 0 auto;
+   }
+
+   .plant {
+     flex: 0 0 calc(50% - 20px);
+     margin: 10px;
+    //  margin-bottom: 5px;
+   }
+ }
+
+ /* Portrait tablet and small desktops */
+ @media (min-width: 1110px) {
+      .plantList {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 1180px;
+        margin: 0 auto;
+      }
+
+      .plant {
+        flex: 0 0 calc(33.333% - 20px);
+        margin: 10px;
+        margin-bottom: 25px;
+      }
+ }
+
+ 
