@@ -11,6 +11,7 @@ import firebase from './components/firebase';
 import Form from "./components/Form"
 import PlantList from "./components/PlantLibrary";
 import Nav from "./components/Nav";
+import pplogo from "./assets/pplogo.png";
 
 // kick off the polyfill! - used for back to top / smooth scrolling. 
 // smoothscroll.polyfill();
@@ -127,8 +128,8 @@ class App extends Component {
       {/* <Nav openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} backToTop={this.backToTop}/> */}
       <Nav openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen}/>
       {/* <h1>Plant Parenthood</h1> */}
-      <figure className="logo">
-      <img src="/assets/pplogo.png" alt=""/>
+      <figure className="logoContainer">
+      <img src={pplogo} className="AppLogo" alt="logo" />
       </figure>
       <Form addPlantToDatabase={this.addPlantToDatabase} openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} />
       <PlantList listOfPlants={this.state.plantList} flip={this.flip}  killPlant={this.killPlant}/>

@@ -326,6 +326,14 @@ img {
 .App {
   position: relative; }
 
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto; }
+
+.AppLogo {
+  width: 200px; }
+
 html {
   font-size: 62.5%; }
 
