@@ -1,6 +1,5 @@
 @import "./partials/_setup.scss";
 @import "./partials/_cards.scss";
-@import "./partials/_mediaqueries.scss";
 
 
  .App {
@@ -208,25 +207,17 @@ border: 1px solid #fff;
 
  // MODAL FORM ENDS
  //LISTING
-//  .plantList {
-//    margin-bottom: 100px;
-//    display: flex;
-//    flex-direction: column;
-//    align-items: center;
-//  }
+ .plantList {
+   margin-bottom: 100px;
+  //  display: flex;
+  //  flex-direction: column;
+  //  align-items: center;
+ }
 
-.plantList{
-  margin-bottom: 100px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-}
- .wrapper {
-  width: 90%;
-  margin: 0 auto;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+ .wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
  }
 
  //LISTING ENDS
@@ -247,20 +238,30 @@ border: 1px solid #fff;
  /* Landscape phone to portrait tablet */
  @media (min-width: 768px) {
    .plantList {
-     margin-bottom: 100px;
+     width: 100%;
+    //  width: 90%;
+     margin: 0 auto;
+    //  margin-bottom: 100px;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+    //  flex-wrap: wrap;
+    align-items: center;
    }
 
    .wrapper{
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-       flex-wrap: wrap;
-        width: 90%;
-        margin: 0 auto;
-
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 20 auto;
    }
+
    .plant {
-    margin-right: 25px;
+     flex: 1 0 33.333%;
+    // margin-right: 25px;
+    // margin: 15px;
      margin-bottom: 25px;
    }
  }

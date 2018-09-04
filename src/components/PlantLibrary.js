@@ -12,7 +12,7 @@ class PlantList extends Component {
 render(){
   return (
     <section className="plantList">
-    {/* <div className = "wrapper" > */}
+    <div className = "wrapper" >
 
     {this.props.listOfPlants.map( (plant) => {
       return (
@@ -72,7 +72,7 @@ render(){
           </div> /*closes plant*/
       )
     })}
-    {/* </div> */}
+    </div>
     </section>
   )
 }
