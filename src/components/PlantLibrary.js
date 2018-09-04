@@ -12,9 +12,10 @@ class PlantList extends Component {
 render(){
   return (
     <section className="plantList">
+    {/* <div className = "wrapper" > */}
+
     {this.props.listOfPlants.map( (plant) => {
       return (
-
 
         <div id={plant.key} className="plant" key={plant.key}> {/*opens plant*/}
 { console.log(plant.key) }
@@ -71,6 +72,7 @@ render(){
           </div> /*closes plant*/
       )
     })}
+    {/* </div> */}
     </section>
   )
 }

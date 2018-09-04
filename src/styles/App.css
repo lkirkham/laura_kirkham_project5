@@ -297,19 +297,6 @@ img {
   margin-left: 3px; }
 
 /* card icons end */
-/* Portrait tablet and small desktops */
-/* Landscape phone to portrait tablet */
-/* iPhone 5 / SE */
-@media (max-width: 350px) {
-  .modalContent {
-    width: 280px; }
-  .plant {
-    position: relative;
-    width: 300px;
-    height: 220px; }
-  .plantSelfie {
-    height: 220px; } }
-
 .App {
   position: relative; }
 
@@ -488,3 +475,37 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+@media (min-width: 768px) {
+  .plantList {
+    margin-bottom: 100px; }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto; }
+  .plant {
+    margin-right: 25px;
+    margin-bottom: 25px; } }
+
+/* iPhone 5 / SE */
+@media (max-width: 350px) {
+  .modalContent {
+    width: 280px; }
+  .plant {
+    position: relative;
+    width: 300px;
+    height: 220px; }
+  .plantSelfie {
+    height: 220px; } }
