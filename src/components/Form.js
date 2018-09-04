@@ -97,7 +97,7 @@ handleSubmit = (e) => {
       <div className="formWrapper">
 
         <form className="modalContent" onSubmit={this.handleSubmit}>
-            
+            <div className="twoPerLine">
             <div className="plantName quest">
               <label htmlFor="plantName">Plant Name</label>
               <input onChange={this.handleChange} id="plantName" type="text" placeholder="Ie. Diane" value={this.state.plantName} />
@@ -107,7 +107,8 @@ handleSubmit = (e) => {
               <label htmlFor="plantSpecies">Species</label>
               <input onChange={this.handleChange} id="plantSpecies" type="text" placeholder="Ie. Monstera Deliciosa" value={this.state.plantSpecies} />
             </div>
-
+            </div>
+            < div className = "twoPerLine" >
             <div className="plantPic quest">
               <p>Plant Image</p>
               <input name="plantImage" /*value={this.state.plantUrl}*/ onChange={this.handleImageChange} id="plantImage" type="file" accept="image/*"/>
@@ -117,7 +118,7 @@ handleSubmit = (e) => {
               <label htmlFor="plantWaterQuant">Water Quantity</label>
               <input onChange={this.handleChange} id="plantWaterQuant" type="text" placeholder="Ie. 2 ounces" value={this.state.plantWaterQuant} />
             </div>
-  
+            </div>
             <div className = "plantWaterFreq quest" >
               <p>Watering Frequency</p>
               <fieldset className="plantWaterFreqRadio">

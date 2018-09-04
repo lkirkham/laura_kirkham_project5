@@ -2,126 +2,131 @@
 @import "./partials/_cards.scss";
 @import "./partials/_nav.scss";
 
-
- .App {
-   position: relative;
- }
-
-.logoContainer{
-display:flex;
-justify-content: center;
-margin:25px auto;
+.App {
+  position: relative;
 }
- .AppLogo{
-width: 200px;
- }
 
- html {
-   font-size: 62.5%;
- }
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto;
+}
 
- body {
-   font-size: 1.6rem;
-   background-color: #fff;
- }
+.AppLogo {
+  width: 200px;
+}
 
- p {
-   font-size: 1.4rem;
-   font-family: 'Roboto', sans-serif;
-   margin: 5px 0;
- }
+html {
+  font-size: 62.5%;
+}
 
- fieldset {
-   border: none;
-   padding: 0;
- }
+body {
+  font-size: 1.6rem;
+  background-color: #fff;
+}
 
- .plantTypeRadio,
- .plantSunshineAmountRadio,
- .plantWaterFreqRadio {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+p {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  margin: 5px 0;
+}
 
-   div {
-     display: flex;
-     align-items: center;
-     padding-right: 15px;
-     flex: 1 0 50%;
+fieldset {
+  border: none;
+  padding: 0;
+}
 
-     input {
-       height: 3rem;
-       width: 3rem;
-     }
+.plantTypeRadio,
+.plantSunshineAmountRadio,
+.plantWaterFreqRadio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-     label {
-       font-size: 1.4rem;
-     }
-   }
- }
+  div {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    flex: 1 0 50%;
 
- // MODAL FORM
- .modalStyle {
-   z-index: 7000;
-   height: 100vh;
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   background-color: #fff;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
- }
+    input {
+      height: 3rem;
+      width: 3rem;
+    }
 
- .modalContent {
-   width: 300px;
- }
+    label {
+      font-size: 1.4rem;
+    }
+  }
+}
 
- .formWrapper {
-   margin: 0 auto;
-   //  max-width: 300px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   position: absolute;
-   width: 100%;
-   height: 100vh;
-   overflow-y: auto;
- }
+// MODAL FORM
+.modalStyle {
+  z-index: 7000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
- .quest {
-   margin-bottom: 30px;
- }
+.modalContent {
+  width: 300px;
+}
 
- form {
-   margin-bottom: 150px;
-   padding: 0;
-   .plantName,
-   .plantSpecies,
-   .plantWaterQuant, .plantCare {
-     border: 0;
-     margin-top: 25px;
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     font-family: 'Roboto', sans-serif;
-     -webkit-appearance: none;
-     border-radius: 0;
-     label {
-       font-size: 2rem;
-       margin-bottom:5px;
-       color: #398449;
-     }
-     input {
-       border-top: none;
-       border-right: none;
-       border-left: none;
-       border-bottom: 1px solid #4a4a4a;
-       background: transparent;
-       font-size: 1.6rem;
-     }
+.formWrapper {
+  margin: 0 auto;
+  //  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.quest {
+  margin-bottom: 30px;
+}
+
+form {
+  margin-bottom: 150px;
+  padding: 0;
+
+  .plantName,
+  .plantSpecies,
+  .plantWaterQuant,
+  .plantCare {
+    border: 0;
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    label {
+      font-size: 2rem;
+      margin-bottom: 5px;
+      color: #398449;
+    }
+
+    input {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 1px solid #4a4a4a;
+      background: transparent;
+      font-size: 1.6rem;
+    }
+
     textarea {
       resize: none;
       // border-top: none;
@@ -129,77 +134,81 @@ width: 200px;
       // border-left: none;
       // border-bottom: 1px solid #4a4a4a;
     }
-   }
-   .plantCare{
-     margin-bottom:10px;
-   }
-   .plantTypes, .plantPic,
-   .plantWaterFreq,
-   .plantSunExposure {
-     p{
-       color: #398449;
-       font-size: 2rem;
-       margin-bottom:5px;
-     }
-     div{
-       margin-bottom: 5px;
-     }
-   }
- }
-.btnContainer{
-  display:flex;
+  }
+
+  .plantCare {
+    margin-bottom: 10px;
+  }
+
+  .plantTypes,
+  .plantPic,
+  .plantWaterFreq,
+  .plantSunExposure {
+    p {
+      color: #398449;
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    div {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.btnContainer {
+  display: flex;
   justify-content: center;
 }
- .btn {
-   padding: 10px 25px;
-   width:100%;
-   margin-bottom: 10px;
-   flex: 1 0 100%;
-   font-family: 'Roboto', sans-serif;
-   font-size: 2rem;
- }
 
- .btnSubmit {
-margin-right: 10px;
-color: #398449;
-background-color: #fff;
-border: 1px solid #398449;
-&:hover{
- background-color: #398449;
- color: #fff;
-border: 1px solid #fff;
+.btn {
+  padding: 10px 25px;
+  width: 100%;
+  margin-bottom: 10px;
+  flex: 1 0 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
 }
- }
+
+.btnSubmit {
+  margin-right: 10px;
+  color: #398449;
+  background-color: #fff;
+  border: 1px solid #398449;
+
+  &:hover {
+    background-color: #398449;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
 
 .btnClose {
   position: absolute;
-  top:15px;
-  right:15px;
+  top: 15px;
+  right: 15px;
   border: none;
-  background:transparent;
+  background: transparent;
   font-size: 2.2rem;
   color: #4a4a4a;
 }
 
- // MODAL FORM ENDS
- //LISTING
- .plantList {
-   margin-bottom: 100px;
+// MODAL FORM ENDS
+//LISTING
+.plantList {
+  margin-bottom: 100px;
   //  display: flex;
   //  flex-direction: column;
   //  align-items: center;
- }
+}
 
- .wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
- }
+}
 
- //LISTING ENDS
-
-
-
+//LISTING ENDS
 /// =================================
 /// =================================
 /// =================================
@@ -207,73 +216,108 @@ border: 1px solid #fff;
 /// =================================
 /// =================================
 /// =================================
+/* iPhone 5 / SE */
+@media (max-width: 350px) {
+  .modalContent {
+    width: 280px;
+  }
 
- /* iPhone 5 / SE */
- @media (max-width: 350px) {
-   .modalContent {
-     width: 280px;
-   }
+  .plant {
+    position: relative;
+    width: 300px;
+    height: 220px;
+  }
 
-   .plant {
-     position: relative;
-     width: 300px;
-     height: 220px;
-   }
+  .plantSelfie {
+    height: 220px;
+  }
+}
 
-   .plantSelfie {
-     height: 220px;
-   }
- }
+/* Landscape phone to portrait tablet */
+@media (min-width: 740px) {
+  .plantList {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
- /* Landscape phone to portrait tablet */
- @media (min-width: 740px) {
-   .plantList {
-     width: 100%;
-     margin: 0 auto;
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-   }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 740px;
+    margin: 0 auto;
+  }
 
-   .wrapper {
-     display: flex;
-     flex-direction: row;
-     justify-content: flex-start;
-     flex-wrap: wrap;
-     width: 740px;
-     margin: 0 auto;
-   }
-
-   .plant {
-     flex: 0 0 calc(50% - 20px);
-     margin: 10px;
+  .plant {
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
     //  margin-bottom: 5px;
-   }
- }
+  }
 
- /* Portrait tablet and small desktops */
- @media (min-width: 1110px) {
-      .plantList {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
+  .modalContent {
+    width: 600px;
+  }
+
+  .btnClose {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 2.2rem;
+    color: #4a4a4a;
+  }
+
+  .plantTypeRadio,
+  .plantSunshineAmountRadio,
+  .plantWaterFreqRadio {
+    justify-content: flex-start;
+    div {
+      padding-right: 15px;
+      flex: 0 0 33.333%;
+      input {
+        height: 3rem;
+        width: 3rem;
       }
-
-      .wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        width: 1180px;
-        margin: 0 auto;
+      label {
+        font-size: 1.4rem;
       }
+    }
+  }
 
-      .plant {
-        flex: 0 0 calc(33.333% - 20px);
-        margin: 10px;
-        margin-bottom: 25px;
-      }
- }
+  .twoPerLine{
+    display:flex;
+    .plantName, .plantPic {
+    margin-right: 20px;
+    }
+  }
+}
 
- 
+/* Portrait tablet and small desktops */
+@media (min-width: 1110px) {
+  .plantList {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 1180px;
+    margin: 0 auto;
+  }
+
+  .plant {
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 10px;
+    margin-bottom: 25px;
+  }
+}

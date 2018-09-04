@@ -437,7 +437,8 @@ form {
   padding: 0; }
   form .plantName,
   form .plantSpecies,
-  form .plantWaterQuant, form .plantCare {
+  form .plantWaterQuant,
+  form .plantCare {
     border: 0;
     margin-top: 25px;
     width: 100%;
@@ -448,13 +449,15 @@ form {
     border-radius: 0; }
     form .plantName label,
     form .plantSpecies label,
-    form .plantWaterQuant label, form .plantCare label {
+    form .plantWaterQuant label,
+    form .plantCare label {
       font-size: 2rem;
       margin-bottom: 5px;
       color: #398449; }
     form .plantName input,
     form .plantSpecies input,
-    form .plantWaterQuant input, form .plantCare input {
+    form .plantWaterQuant input,
+    form .plantCare input {
       border-top: none;
       border-right: none;
       border-left: none;
@@ -463,17 +466,20 @@ form {
       font-size: 1.6rem; }
     form .plantName textarea,
     form .plantSpecies textarea,
-    form .plantWaterQuant textarea, form .plantCare textarea {
+    form .plantWaterQuant textarea,
+    form .plantCare textarea {
       resize: none; }
   form .plantCare {
     margin-bottom: 10px; }
-  form .plantTypes p, form .plantPic p,
+  form .plantTypes p,
+  form .plantPic p,
   form .plantWaterFreq p,
   form .plantSunExposure p {
     color: #398449;
     font-size: 2rem;
     margin-bottom: 5px; }
-  form .plantTypes div, form .plantPic div,
+  form .plantTypes div,
+  form .plantPic div,
   form .plantWaterFreq div,
   form .plantSunExposure div {
     margin-bottom: 5px; }
@@ -545,7 +551,39 @@ form {
     margin: 0 auto; }
   .plant {
     flex: 0 0 calc(50% - 20px);
-    margin: 10px; } }
+    margin: 10px; }
+  .modalContent {
+    width: 600px; }
+  .btnClose {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 2.2rem;
+    color: #4a4a4a; }
+  .plantTypeRadio,
+  .plantSunshineAmountRadio,
+  .plantWaterFreqRadio {
+    justify-content: flex-start; }
+    .plantTypeRadio div,
+    .plantSunshineAmountRadio div,
+    .plantWaterFreqRadio div {
+      padding-right: 15px;
+      flex: 0 0 33.333%; }
+      .plantTypeRadio div input,
+      .plantSunshineAmountRadio div input,
+      .plantWaterFreqRadio div input {
+        height: 3rem;
+        width: 3rem; }
+      .plantTypeRadio div label,
+      .plantSunshineAmountRadio div label,
+      .plantWaterFreqRadio div label {
+        font-size: 1.4rem; }
+  .twoPerLine {
+    display: flex; }
+    .twoPerLine .plantName, .twoPerLine .plantPic {
+      margin-right: 20px; } }
 
 /* Portrait tablet and small desktops */
 @media (min-width: 1110px) {
