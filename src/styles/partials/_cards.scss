@@ -222,9 +222,17 @@ img {
     font-size: 1.2rem;
     margin: 0 0 0 5px;
   }
+  &:hover{
+    background-color: #4a4a4a;
+    .fas, p {
+      color: white;
+    }
+  }
 }
 
 /* card back ends */
+
+
 /* card icons */
 .plant .plantStats .fas {
   font-size: 1.8rem;
@@ -232,6 +240,33 @@ img {
 
 .fa-tint {
   margin-left: 3px;
+  color: #54ddcd;
+    &:hover {
+      animation-name: pulse;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+}
+
+.fa-sun {
+  color: #ffdb58;
+  &:hover{
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.22); }
 }
 
 /* card icons end */

@@ -287,6 +287,10 @@ img {
   .killPlant p {
     font-size: 1.2rem;
     margin: 0 0 0 5px; }
+  .killPlant:hover {
+    background-color: #4a4a4a; }
+    .killPlant:hover .fas, .killPlant:hover p {
+      color: white; }
 
 /* card back ends */
 /* card icons */
@@ -294,7 +298,33 @@ img {
   font-size: 1.8rem; }
 
 .fa-tint {
-  margin-left: 3px; }
+  margin-left: 3px;
+  color: #54ddcd; }
+  .fa-tint:hover {
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+
+.fa-sun {
+  color: #ffdb58; }
+  .fa-sun:hover {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.22); } }
 
 /* card icons end */
 .mainNavigation {
