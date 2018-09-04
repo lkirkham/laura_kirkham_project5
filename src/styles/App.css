@@ -264,7 +264,8 @@ img {
   text-transform: uppercase; }
 
 .plantStats ul {
-  padding: 0; }
+  padding: 0;
+  margin: 10px 0 0 0; }
   .plantStats ul li {
     list-style-type: none; }
   .plantStats ul li:nth-child(3) {
@@ -296,6 +297,19 @@ img {
   margin-left: 3px; }
 
 /* card icons end */
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+/* iPhone 5 / SE */
+@media (max-width: 350px) {
+  .modalContent {
+    width: 280px; }
+  .plant {
+    position: relative;
+    width: 300px;
+    height: 220px; }
+  .plantSelfie {
+    height: 220px; } }
+
 .App {
   position: relative; }
 
@@ -339,7 +353,7 @@ fieldset {
       font-size: 1.4rem; }
 
 .mainNavigation {
-  background-color: lightgreen;
+  background-color: #398449;
   position: fixed;
   width: 100%;
   z-index: 60;
@@ -349,10 +363,19 @@ fieldset {
   .mainNavigation ul {
     display: flex;
     margin: 0;
+    padding: 0;
     list-style-type: none;
     justify-content: space-around; }
     .mainNavigation ul li {
-      padding: 25px; }
+      padding: 25px 30px; }
+
+.addPlantBtn {
+  font-size: 3rem;
+  color: white; }
+
+.logOutBtn, .aboutBtn {
+  color: #cccccc;
+  font-size: 3rem; }
 
 .modalStyle {
   z-index: 7000;
@@ -381,7 +404,7 @@ fieldset {
   overflow-y: auto; }
 
 .quest {
-  margin-bottom: 25px; }
+  margin-bottom: 30px; }
 
 form {
   margin-bottom: 150px;
@@ -401,7 +424,8 @@ form {
     form .plantSpecies label,
     form .plantWaterQuant label, form .plantCare label {
       font-size: 2rem;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      color: #398449; }
     form .plantName input,
     form .plantSpecies input,
     form .plantWaterQuant input, form .plantCare input {
@@ -415,11 +439,18 @@ form {
     form .plantSpecies textarea,
     form .plantWaterQuant textarea, form .plantCare textarea {
       resize: none; }
+  form .plantCare {
+    margin-bottom: 10px; }
   form .plantTypes p, form .plantPic p,
   form .plantWaterFreq p,
   form .plantSunExposure p {
+    color: #398449;
     font-size: 2rem;
-    margin-bottom: 25px; }
+    margin-bottom: 5px; }
+  form .plantTypes div, form .plantPic div,
+  form .plantWaterFreq div,
+  form .plantSunExposure div {
+    margin-bottom: 5px; }
 
 .btnContainer {
   display: flex;
@@ -427,14 +458,30 @@ form {
 
 .btn {
   padding: 10px 25px;
-  margin: 10px;
-  flex: 1 0 calc(50% - 10px); }
+  width: 100%;
+  margin-bottom: 10px;
+  flex: 1 0 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem; }
 
 .btnSubmit {
-  margin-right: 10px; }
+  margin-right: 10px;
+  color: #398449;
+  background-color: #fff;
+  border: 1px solid #398449; }
+  .btnSubmit:hover {
+    background-color: #398449;
+    color: #fff;
+    border: 1px solid #fff; }
 
 .btnClose {
-  margin-left: 10px; }
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 2.2rem;
+  color: #4a4a4a; }
 
 .plantList {
   margin-bottom: 100px;

@@ -12,7 +12,6 @@ class PlantList extends Component {
 render(){
   return (
     <section className="plantList">
-    <h2>My Plants</h2>
     {this.props.listOfPlants.map( (plant) => {
       return (
 

@@ -1,5 +1,7 @@
  @import "./partials/_setup.scss";
  @import "./partials/_cards.scss";
+  @import "./partials/_mediaqueries.scss";
+
 
  .App {
    position: relative;
@@ -51,7 +53,7 @@
 
  // NAV
  .mainNavigation {
-   background-color: lightgreen;
+   background-color: #398449;
    position: fixed;
    width: 100%;
    z-index: 60;
@@ -63,14 +65,25 @@
    ul {
      display: flex;
      margin: 0;
+     padding:0;
      list-style-type: none;
      justify-content: space-around;
 
      li {
-       padding: 25px,
+       padding: 25px 30px,
      }
    }
  }
+
+ .addPlantBtn {
+   font-size: 3rem;
+   color: white;
+ }
+
+  .logOutBtn, .aboutBtn {
+    color: #cccccc;
+    font-size: 3rem;
+  }
 
  // MODAL FORM
  .modalStyle {
@@ -104,7 +117,7 @@
  }
 
  .quest {
-   margin-bottom: 25px;
+   margin-bottom: 30px;
  }
 
  form {
@@ -124,6 +137,7 @@
      label {
        font-size: 2rem;
        margin-bottom:5px;
+       color: #398449;
      }
      input {
        border-top: none;
@@ -141,12 +155,19 @@
       // border-bottom: 1px solid #4a4a4a;
     }
    }
+   .plantCare{
+     margin-bottom:10px;
+   }
    .plantTypes, .plantPic,
    .plantWaterFreq,
    .plantSunExposure {
      p{
+       color: #398449;
        font-size: 2rem;
-       margin-bottom:25px;
+       margin-bottom:5px;
+     }
+     div{
+       margin-bottom: 5px;
      }
    }
  }
@@ -156,16 +177,34 @@
 }
  .btn {
    padding: 10px 25px;
-   margin: 10px;
-   flex: 1 0 calc(50% - 10px);
+   width:100%;
+   margin-bottom: 10px;
+   flex: 1 0 100%;
+   font-family: 'Roboto', sans-serif;
+   font-size: 2rem;
  }
 
  .btnSubmit {
 margin-right: 10px;
+color: #398449;
+background-color: #fff;
+border: 1px solid #398449;
+&:hover{
+ background-color: #398449;
+ color: #fff;
+border: 1px solid #fff;
+}
  }
- .btnClose{
-margin-left: 10px;
- }
+
+.btnClose {
+  position: absolute;
+  top:15px;
+  right:15px;
+  border: none;
+  background:transparent;
+  font-size: 2.2rem;
+  color: #4a4a4a;
+}
 
  // MODAL FORM ENDS
  //LISTING

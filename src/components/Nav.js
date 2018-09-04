@@ -11,19 +11,19 @@ class Nav extends Component {
     return(
       <nav className="mainNavigation">
         <ul>
-          <li><button onClick={(e) => {
+          <li><div className="addPlantBtn" onClick={(e) => {
 								this.props.openModal();
               }}
                 >
-              Add</button></li>
-          <li><button>Instructions</button></li>
-          <li><button>Logout</button></li>
+              <i class="fas fa-plus"></i></div></li>
+          <li><div className="aboutBtn"><i class="fas fa-leaf"></i></div></li>
+          <li><div className="logOutBtn"><i class="fas fa-sign-out-alt"></i></div></li>
         </ul>
       </nav>
 
     )
   }
-}
+} 
 
 
 export default Nav
