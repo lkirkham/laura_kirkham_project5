@@ -42,6 +42,7 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
 
   div {
     display: flex;
@@ -56,6 +57,7 @@ fieldset {
 
     label {
       font-size: 1.4rem;
+      font-family: 'Roboto', sans-serif;
     }
   }
 }
@@ -98,6 +100,7 @@ fieldset {
 form {
   margin-bottom: 150px;
   padding: 0;
+  position:relative;
 
   .plantName,
   .plantSpecies,
@@ -185,8 +188,8 @@ form {
 
 .btnClose {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: -15px;
   border: none;
   background: transparent;
   font-size: 2.2rem;
@@ -264,8 +267,8 @@ form {
 
   .btnClose {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: -35px;
     border: none;
     background: transparent;
     font-size: 2.2rem;

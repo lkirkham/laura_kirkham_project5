@@ -385,7 +385,8 @@ fieldset {
 .plantWaterFreqRadio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  font-family: 'Roboto', sans-serif; }
   .plantTypeRadio div,
   .plantSunshineAmountRadio div,
   .plantWaterFreqRadio div {
@@ -401,7 +402,8 @@ fieldset {
     .plantTypeRadio div label,
     .plantSunshineAmountRadio div label,
     .plantWaterFreqRadio div label {
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      font-family: 'Roboto', sans-serif; }
 
 .modalStyle {
   z-index: 7000;
@@ -434,7 +436,8 @@ fieldset {
 
 form {
   margin-bottom: 150px;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
   form .plantName,
   form .plantSpecies,
   form .plantWaterQuant,
@@ -508,8 +511,8 @@ form {
 
 .btnClose {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: -15px;
   border: none;
   background: transparent;
   font-size: 2.2rem;
@@ -556,8 +559,8 @@ form {
     width: 600px; }
   .btnClose {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: -35px;
     border: none;
     background: transparent;
     font-size: 2.2rem;
