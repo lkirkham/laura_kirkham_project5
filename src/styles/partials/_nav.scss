@@ -4,10 +4,11 @@
   position: fixed;
   width: 100%;
   z-index: 60;
-  // height:50px;
+  height:70px;
   bottom: 0;
   display: flex;
   justify-content: center;
+  padding: 20px;
 
   ul {
     display: flex;
@@ -15,20 +16,34 @@
     padding: 0;
     list-style-type: none;
     justify-content: space-around;
-
     li {
-      padding: 25px 30px,
+      padding: 0px 50px;
+      font-size: 3rem;
+      margin:0;
+      font-family: 'Roboto', sans-serif;
+      // text-transform: uppercase;
+      text-align: center;
+      .text{
+        // text-decoration: underline;
+        font-size: 1rem;
+      }
     }
   }
 }
 
+.google {
+  margin-bottom:-2px;
+  width: 1.6rem;
+  height: auto;
+}
+
+.logOutBtn, .logInBtn,  
 .addPlantBtn {
-  font-size: 3rem;
+
   color: white;
 }
 
-.logOutBtn,
-.aboutBtn {
+.aboutBtn,  {
   color: #cccccc;
-  font-size: 3rem;
+
 }

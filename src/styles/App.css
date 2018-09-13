@@ -332,9 +332,11 @@ img {
   position: fixed;
   width: 100%;
   z-index: 60;
+  height: 70px;
   bottom: 0;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  padding: 20px; }
   .mainNavigation ul {
     display: flex;
     margin: 0;
@@ -342,16 +344,33 @@ img {
     list-style-type: none;
     justify-content: space-around; }
     .mainNavigation ul li {
-      padding: 25px 30px; }
+      padding: 0px 50px;
+      font-size: 3rem;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      text-align: center; }
+      .mainNavigation ul li .text {
+        font-size: 1rem; }
 
+.google {
+  margin-bottom: -2px;
+  width: 1.6rem;
+  height: auto; }
+
+.logOutBtn, .logInBtn,
 .addPlantBtn {
-  font-size: 3rem;
   color: white; }
 
-.logOutBtn,
 .aboutBtn {
-  color: #cccccc;
-  font-size: 3rem; }
+  color: #cccccc; }
+
+.welcome {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.welcomeImageContainer {
+  width: 30%; }
 
 .App {
   position: relative; }
@@ -359,7 +378,8 @@ img {
 .logoContainer {
   display: flex;
   justify-content: center;
-  margin: 25px auto; }
+  margin: 25px auto;
+  padding-left: 20px; }
 
 .AppLogo {
   width: 200px; }
@@ -383,27 +403,29 @@ fieldset {
 .plantTypeRadio,
 .plantSunshineAmountRadio,
 .plantWaterFreqRadio {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  clear: both; }
   .plantTypeRadio div,
   .plantSunshineAmountRadio div,
   .plantWaterFreqRadio div {
     display: flex;
     align-items: center;
     padding-right: 15px;
-    flex: 1 0 50%; }
+    float: left;
+    width: 50%; }
     .plantTypeRadio div input,
     .plantSunshineAmountRadio div input,
     .plantWaterFreqRadio div input {
-      height: 3rem;
-      width: 3rem; }
+      height: 2.2rem;
+      width: 2.2rem; }
     .plantTypeRadio div label,
     .plantSunshineAmountRadio div label,
     .plantWaterFreqRadio div label {
       font-size: 1.4rem;
-      font-family: 'Roboto', sans-serif; }
+      font-family: 'Roboto', sans-serif;
+      padding-left: 3px; }
 
 .modalStyle {
   z-index: 7000;
@@ -435,9 +457,12 @@ fieldset {
   margin-bottom: 30px; }
 
 form {
-  margin-bottom: 150px;
+  margin: auto 0;
   padding: 0;
   position: relative; }
+  form h2 {
+    margin: 10px 0px 0px 0px;
+    color: #398449; }
   form .plantName,
   form .plantSpecies,
   form .plantWaterQuant,
@@ -556,11 +581,13 @@ form {
     flex: 0 0 calc(50% - 20px);
     margin: 10px; }
   .modalContent {
-    width: 600px; }
+    width: 600px;
+    border: 1px solid #4a4a4a;
+    padding: 15px; }
   .btnClose {
     position: absolute;
     top: 10px;
-    right: -35px;
+    right: 0px;
     border: none;
     background: transparent;
     font-size: 2.2rem;
@@ -573,7 +600,7 @@ form {
     .plantSunshineAmountRadio div,
     .plantWaterFreqRadio div {
       padding-right: 15px;
-      flex: 0 0 33.333%; }
+      width: 25%; }
       .plantTypeRadio div input,
       .plantSunshineAmountRadio div input,
       .plantWaterFreqRadio div input {
@@ -586,7 +613,9 @@ form {
   .twoPerLine {
     display: flex; }
     .twoPerLine .plantName, .twoPerLine .plantPic {
-      margin-right: 20px; } }
+      margin-right: 20px; }
+    .twoPerLine .plantPic {
+      margin-top: 20px; } }
 
 /* Portrait tablet and small desktops */
 @media (min-width: 1110px) {
