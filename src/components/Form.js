@@ -73,15 +73,20 @@ handleSubmit = (e) => {
     self.setState({
       plantImage: plantUrl,
     }, () => {
-      self.props.addPlantToDatabase(self.state.plantName, self.state.plantSpecies, self.state.plantImage, self.state.plantType, self.state.plantWaterFreq, self.state.plantWaterQuant, self.state.plantSunshine, self.state.plantCare);
-    }) //closes set state
+      self.props.addPlantToDatabase(self.state.plantName, self.state.plantSpecies, self.state.plantImage, self.state.plantType, self.state.plantWaterFreq, self.state.plantWaterQuant, self.state.plantSunshine, self.state.plantCare)
+      self.setState({
+        plantName: "",
+        plantSpecies: "",
+        plantImage: "",
+        plantType: "",
+        plantWaterFreq: "",
+        plantWaterQuant: "",
+        plantSunshine: "",
+        plantCare: ""
+      });    
+    } ) //closes set state
     })//closes getDownloadURL
-    //clears the form
-      document.forms["addPlantForm"].reset();
-  })//closes .then (function (snapshot))
-        
-
-
+  })
     //close modal on submit after information has been passed.
     this.props.closeModal(e)
 

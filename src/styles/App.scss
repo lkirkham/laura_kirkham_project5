@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.logoSection {
+  height: 117px;
+}
+
 .logoContainer {
   display: flex;
   justify-content: center;
@@ -210,9 +214,12 @@ margin: auto 0;
 //LISTING
 .plantList {
   margin-bottom: 100px;
+  // height: calc(100vh - 70px - 117px);
+  height: calc(90vh - 115px);
   //  display: flex;
   //  flex-direction: column;
   //  align-items: center;
+  overflow: scroll;
 }
 
 .wrapper {
@@ -259,7 +266,7 @@ margin: auto 0;
   .wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
     width: 740px;
     margin: 0 auto;

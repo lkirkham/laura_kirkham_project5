@@ -332,7 +332,7 @@ img {
   position: fixed;
   width: 100%;
   z-index: 60;
-  height: 70px;
+  max-height: 10vh;
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -374,6 +374,9 @@ img {
 
 .App {
   position: relative; }
+
+.logoSection {
+  height: 117px; }
 
 .logoContainer {
   display: flex;
@@ -544,7 +547,9 @@ form {
   color: #4a4a4a; }
 
 .plantList {
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  height: calc(90vh - 115px);
+  overflow: scroll; }
 
 .wrapper {
   display: flex;
@@ -573,7 +578,7 @@ form {
   .wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
     width: 740px;
     margin: 0 auto; }

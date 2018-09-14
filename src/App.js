@@ -11,7 +11,7 @@ import Form from "./components/Form"
 import PlantList from "./components/PlantLibrary";
 import Nav from "./components/Nav";
 import Welcome from "./components/Welcome";
-import pplogo from "./assets/pplogo.png";
+import Logo from "./components/Logo"
 
 
 // kick off the polyfill! - used for back to top / smooth scrolling. 
@@ -132,6 +132,7 @@ class App extends Component {
 
   addPlantToDatabase = (name, species, img, type, freq, quant, sun, care) => {
     console.log('images', img)
+    console.log(name, species, img, type, freq, quant, sun, care);
     // console.log(name, species, type, care);
     this.dbRef.push({
       plantName: name,
@@ -157,7 +158,7 @@ class App extends Component {
     //kill/delete that plant
     plantDbRef.remove();
   }
-  
+
 
   //render the application
   render() {
@@ -167,9 +168,10 @@ class App extends Component {
           {/* <Nav openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} backToTop={this.backToTop}/> */}
           <Nav user={this.state.user} login={this.login} logout={this.logout} openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} />
           {/* <h1>Plant Parenthood</h1> */}
-          <figure className="logoContainer">
+          {/* <figure className="logoContainer">
             <img src={pplogo} className="AppLogo" alt="logo" />
-          </figure>
+          </figure> */}
+          <Logo />
           <Form addPlantToDatabase={this.addPlantToDatabase} openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} />
           {this.state.user ? (
           <Route exact path="/"
