@@ -133,9 +133,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .plant {
   position: relative;
-  width: 350px;
+  max-width: 350px;
+  flex: 1 1 calc(100%);
   height: 230px;
-  margin-bottom: 25px;
+  margin: 25px;
   z-index: 1;
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
@@ -332,7 +333,8 @@ img {
   position: fixed;
   width: 100%;
   z-index: 60;
-  max-height: 10vh;
+  max-height: 8vh;
+  height: 8vh;
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -342,14 +344,16 @@ img {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-items: center; }
     .mainNavigation ul li {
       padding: 0px 50px;
-      font-size: 3rem;
+      font-size: 1.9rem;
       margin: 0;
       font-family: 'Roboto', sans-serif;
       text-align: center; }
       .mainNavigation ul li .text {
+        margin: 0;
         font-size: 1rem; }
 
 .google {
@@ -364,13 +368,192 @@ img {
 .aboutBtn {
   color: #cccccc; }
 
+@media (max-width: 325px) {
+  .mainNavigation {
+    max-height: 8vh;
+    height: 8vh;
+    bottom: 0;
+    padding: 20px; }
+    .mainNavigation ul {
+      margin: 0;
+      padding: 0; }
+      .mainNavigation ul li {
+        padding: 0px 50px;
+        font-size: 1.8rem;
+        margin: 0; }
+        .mainNavigation ul li .text {
+          margin: 0;
+          font-size: 1rem; } }
+
+.welcome header {
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 15px 0px;
+  width: 100%;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  margin: 0; }
+  .welcome header .logoContainer {
+    margin: 0;
+    padding: 0;
+    width: 200px; }
+    .welcome header .logoContainer img {
+      object-fit: contain; }
+
 .welcome {
   display: flex;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  height: calc(100vh - 8vh);
+  overflow: scroll; }
+  .welcome .wrapper {
+    height: calc(100vh - 8vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; }
+    .welcome .wrapper .letter {
+      width: 320px;
+      padding: 15px 20px;
+      margin: 50px auto 0px auto;
+      border-radius: 2px;
+      text-align: center; }
+    .welcome .wrapper .greeting {
+      color: #fff;
+      margin: 0;
+      font-size: 3rem;
+      width: 100%;
+      line-height: 1.25; }
+    .welcome .wrapper .greetingCopy {
+      font-size: 1.6rem;
+      margin-top: 10px;
+      text-align: center;
+      color: #fff; }
 
-.welcomeImageContainer {
-  width: 30%; }
+.signature {
+  width: 150px;
+  object-fit: contain;
+  margin: 10px auto 0 auto; }
+
+@media (max-width: 325px) {
+  header {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px 0px;
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: center; }
+    header .logoContainer {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      header .logoContainer img {
+        object-fit: contain; }
+  .welcome {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    height: calc(100vh - 8vh);
+    overflow: scroll; }
+    .welcome .wrapper {
+      height: calc(100vh - 8vh);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: scroll; }
+      .welcome .wrapper .letter {
+        width: 320px;
+        padding: 10px 20px;
+        margin: 80px auto 0px auto;
+        border-radius: 2px; }
+      .welcome .wrapper .greeting {
+        text-align: left;
+        color: #fff;
+        margin: 0;
+        font-size: 2.5rem;
+        width: 100%;
+        line-height: 1;
+        padding: 0 15px; }
+      .welcome .wrapper .greetingCopy {
+        line-height: 1.25;
+        font-size: 1.6rem;
+        margin-top: 10px;
+        text-align: left;
+        color: #fff;
+        padding: 0 15px; }
+  .signature {
+    width: 150px;
+    object-fit: contain;
+    margin: 10px 0 0 0;
+    text-align: left; } }
+
+@media (min-width: 768px) {
+  header {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 0px;
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: center; }
+    header .logoContainer {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      header .logoContainer img {
+        object-fit: contain; }
+  .welcome {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    height: calc(87vh -13vh);
+    overflow: scroll; }
+    .welcome .wrapper {
+      height: calc(87vh - 13vh);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .welcome .wrapper .letter {
+        width: 600px;
+        padding: 15px 20px;
+        margin: 200px auto 0px auto;
+        border-radius: 2px;
+        text-align: left; }
+      .welcome .wrapper .greeting {
+        color: #fff;
+        margin: 0;
+        font-size: 3rem;
+        width: 100%;
+        line-height: 1.25; }
+      .welcome .wrapper .greetingCopy {
+        font-size: 1.6rem;
+        margin-top: 10px;
+        text-align: left;
+        color: #fff; }
+  .signature {
+    width: 150px;
+    object-fit: contain;
+    margin: 20px 0 0 0; } }
 
 .App {
   position: relative; }
@@ -546,18 +729,41 @@ form {
   font-size: 2.2rem;
   color: #4a4a4a; }
 
+header {
+  background-color: white;
+  padding: 15px 0px;
+  width: 100%;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 5000; }
+  header .logoContainer {
+    margin: 0;
+    padding: 0;
+    width: 200px; }
+    header .logoContainer img {
+      object-fit: contain; }
+
 .plantList {
-  margin-bottom: 100px;
-  height: calc(90vh - 115px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   overflow: scroll; }
 
 .wrapper {
+  margin: 130px 0 150px 0;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: none; }
 
 /* iPhone 5 / SE */
 @media (max-width: 350px) {
+  .wrapper {
+    margin: 80px 0 150px 0; }
   .modalContent {
     width: 280px; }
   .plant {
@@ -570,21 +776,29 @@ form {
 /* Landscape phone to portrait tablet */
 @media (min-width: 740px) {
   .plantList {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-  .wrapper {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
+    overflow: scroll; }
+  .wrapper {
+    width: 730px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    width: 740px;
-    margin: 0 auto; }
+    margin: 110px 0 150px 0; }
   .plant {
-    flex: 0 0 calc(50% - 20px);
-    margin: 10px; }
+    position: relative;
+    max-width: 350px;
+    flex: 0 0 calc(50% - 50px);
+    height: 230px;
+    margin: 25px;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    -o-perspective: 600px;
+    perspective: 600px; }
   .modalContent {
     width: 600px;
     border: 1px solid #4a4a4a;
@@ -624,19 +838,31 @@ form {
 
 /* Portrait tablet and small desktops */
 @media (min-width: 1110px) {
-  .plantList {
-    width: 100%;
-    margin: 0 auto;
+  .pageContainer {
     display: flex;
-    flex-direction: row; }
-  .wrapper {
+    justify-content: center;
+    margin: 0 auto; }
+  .plantList {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: scroll; }
+  .wrapper {
+    width: 1080px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 1180px;
-    margin: 0 auto; }
+    margin: 110px 0 150px 0; }
   .plant {
-    flex: 0 0 calc(33.333% - 20px);
-    margin: 10px;
-    margin-bottom: 25px; } }
+    position: relative;
+    max-width: 350px;
+    flex: 0 0 calc(33% - 50px);
+    height: 230px;
+    margin: 25px;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    -o-perspective: 600px;
+    perspective: 600px; } }

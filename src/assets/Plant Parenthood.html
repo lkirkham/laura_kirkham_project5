@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="Plant%20Parenthood_files/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="Plant%20Parenthood_files/css.css" rel="stylesheet"> 
+
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Plant Parenthood</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+</style><style type="text/css">article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.plant {
+  position: relative;
+  max-width: 350px;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: calc(100%);
+      flex-basis: calc(100%);
+  height: 230px;
+  margin-bottom: 25px;
+  z-index: 1;
+  -webkit-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px; }
+
+.plantSelfie {
+  margin: 0;
+  max-width: 150px;
+  height: 230px; }
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+/* card front  */
+.cardFront {
+  background-color: #fff;
+  text-align: left;
+  color: #4a4a4a;
+  width: inherit;
+  height: inherit;
+  z-index: 900;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .cardFront:hover {
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.plant.flip .cardFront {
+  z-index: 900;
+  -webkit-transform: rotateY(180deg);
+  -mox-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.cardFront .rightSide {
+  padding: 25px; }
+
+.plant .plantName {
+  font-size: 1.6em;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
+
+.plant .plantSpecies {
+  font-size: 1.4rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 300; }
+
+.flipForward,
+.flipBack {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  padding: 0 10px;
+  cursor: pointer; }
+  .flipForward .fas,
+  .flipBack .fas {
+    font-size: 2.5rem; }
+
+/* card front ends */
+/* card back  */
+.cardBack {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  z-index: 800;
+  margin-top: -230px;
+  width: inherit;
+  height: inherit;
+  padding: 25px;
+  color: #4a4a4a;
+  text-align: left;
+  background-color: #fff;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .cardBack:hover {
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.plant.flip .cardBack {
+  z-index: 1000;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg); }
+
+.cardBack .title,
+.plantType {
+  font-size: 1rem;
+  text-transform: uppercase; }
+
+.plantStats ul {
+  padding: 0;
+  margin: 10px 0 0 0; }
+  .plantStats ul li {
+    list-style-type: none; }
+  .plantStats ul li:nth-child(3) {
+    margin-top: 10px; }
+
+.killPlant {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  border: 1px solid #4a4a4a;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 2px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  cursor: pointer; }
+  .killPlant .fas {
+    font-size: 1.6rem; }
+  .killPlant p {
+    font-size: 1.2rem;
+    margin: 0 0 0 5px; }
+  .killPlant:hover {
+    background-color: #4a4a4a; }
+    .killPlant:hover .fas, .killPlant:hover p {
+      color: white; }
+
+/* card back ends */
+/* card icons */
+.plant .plantStats .fas {
+  font-size: 1.8rem; }
+
+.fa-tint {
+  margin-left: 3px;
+  color: #54ddcd; }
+  .fa-tint:hover {
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; }
+
+.fa-sun {
+  color: #ffdb58; }
+  .fa-sun:hover {
+    -webkit-animation-name: spin;
+            animation-name: spin;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes pulse {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.22);
+            transform: scale(1.22); } }
+
+@keyframes pulse {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.22);
+            transform: scale(1.22); } }
+
+/* card icons end */
+@media (min-width: 740px) {
+  .plant {
+    position: relative;
+    max-width: 350px;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    -ms-flex-negative: 2;
+        flex-shrink: 2;
+    -ms-flex-preferred-size: calc(50% - 50px);
+        flex-basis: calc(50% - 50px);
+    height: 230px;
+    margin: 25px;
+    z-index: 1; } }
+
+.mainNavigation {
+  background-color: #398449;
+  position: fixed;
+  width: 100%;
+  z-index: 60;
+  max-height: 8vh;
+  height: 8vh;
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 20px; }
+  .mainNavigation ul {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-align: center;
+        align-items: center; }
+    .mainNavigation ul li {
+      padding: 0px 50px;
+      font-size: 1.9rem;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      text-align: center; }
+      .mainNavigation ul li .text {
+        margin: 0;
+        font-size: 1rem; }
+
+.google {
+  margin-bottom: -2px;
+  width: 1.6rem;
+  height: auto; }
+
+.logOutBtn, .logInBtn,
+.addPlantBtn {
+  color: white; }
+
+.aboutBtn {
+  color: #cccccc; }
+
+@media (max-width: 325px) {
+  .mainNavigation {
+    max-height: 8vh;
+    height: 8vh;
+    bottom: 0;
+    padding: 20px; }
+    .mainNavigation ul {
+      margin: 0;
+      padding: 0; }
+      .mainNavigation ul li {
+        padding: 0px 50px;
+        font-size: 1.8rem;
+        margin: 0; }
+        .mainNavigation ul li .text {
+          margin: 0;
+          font-size: 1rem; } }
+
+header {
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 15px 0px;
+  width: 100%;
+  height: 13vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  header .logoContainer {
+    margin: 0;
+    padding: 0;
+    width: 200px; }
+    header .logoContainer img {
+      -o-object-fit: contain;
+         object-fit: contain; }
+
+.welcome {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-image: url(/static/media/malte-michels-716678-unsplash.d8c18b3a.jpg);
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  height: calc(100vh - 8vh);
+  overflow: scroll; }
+  .welcome .wrapper {
+    height: calc(100vh - 8vh);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    .welcome .wrapper .letter {
+      width: 320px;
+      padding: 15px 20px;
+      margin: 0px auto 0px auto;
+      border-radius: 2px;
+      text-align: center; }
+    .welcome .wrapper .greeting {
+      color: #fff;
+      margin: 0;
+      font-size: 3rem;
+      width: 100%;
+      line-height: 1.25; }
+    .welcome .wrapper .greetingCopy {
+      font-size: 1.6rem;
+      margin-top: 10px;
+      text-align: center;
+      color: #fff; }
+
+.signature {
+  width: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 10px auto 0 auto; }
+
+@media (max-width: 325px) {
+  header {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px 0px;
+    width: 100%;
+    height: 13vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    header .logoContainer {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      header .logoContainer img {
+        -o-object-fit: contain;
+           object-fit: contain; }
+  .welcome {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    background-image: url(/static/media/malte-michels-716678-unsplash.d8c18b3a.jpg);
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    height: calc(100vh - 8vh);
+    overflow: scroll; }
+    .welcome .wrapper {
+      height: calc(100vh - 8vh);
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      overflow: scroll; }
+      .welcome .wrapper .letter {
+        width: 320px;
+        padding: 10px 20px;
+        margin: 10px auto 0px auto;
+        border-radius: 2px; }
+      .welcome .wrapper .greeting {
+        color: #fff;
+        margin: 0;
+        font-size: 2.5rem;
+        width: 100%;
+        line-height: 1; }
+      .welcome .wrapper .greetingCopy {
+        line-height: 1.25;
+        font-size: 1.6rem;
+        margin-top: 10px;
+        text-align: left;
+        color: #fff;
+        padding: 0 15px; }
+  .signature {
+    margin-top: 10px;
+    width: 150px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin: 0 auto; } }
+
+@media (min-width: 768px) {
+  header {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 0px;
+    width: 100%;
+    height: 13vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    header .logoContainer {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      header .logoContainer img {
+        -o-object-fit: contain;
+           object-fit: contain; }
+  .welcome {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    background-image: url(/static/media/malte-michels-716678-unsplash.d8c18b3a.jpg);
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    height: calc(87vh -13vh);
+    overflow: scroll; }
+    .welcome .wrapper {
+      height: calc(87vh - 13vh);
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center; }
+      .welcome .wrapper .letter {
+        width: 600px;
+        padding: 15px 20px;
+        margin: 0px auto 0px auto;
+        border-radius: 2px;
+        text-align: left; }
+      .welcome .wrapper .greeting {
+        color: #fff;
+        margin: 0;
+        font-size: 3rem;
+        width: 100%;
+        line-height: 1.25; }
+      .welcome .wrapper .greetingCopy {
+        font-size: 1.6rem;
+        margin-top: 10px;
+        text-align: left;
+        color: #fff; }
+  .signature {
+    width: 150px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin: 20px 0 0 0; } }
+
+.App {
+  position: relative; }
+
+.logoSection {
+  height: 117px; }
+
+.logoContainer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 25px auto;
+  padding-left: 20px; }
+
+.AppLogo {
+  width: 200px; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  background-color: #fff; }
+
+p {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  margin: 5px 0; }
+
+fieldset {
+  border: none;
+  padding: 0; }
+
+.plantTypeRadio,
+.plantSunshineAmountRadio,
+.plantWaterFreqRadio {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  clear: both; }
+  .plantTypeRadio div,
+  .plantSunshineAmountRadio div,
+  .plantWaterFreqRadio div {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    padding-right: 15px;
+    float: left;
+    width: 50%; }
+    .plantTypeRadio div input,
+    .plantSunshineAmountRadio div input,
+    .plantWaterFreqRadio div input {
+      height: 2.2rem;
+      width: 2.2rem; }
+    .plantTypeRadio div label,
+    .plantSunshineAmountRadio div label,
+    .plantWaterFreqRadio div label {
+      font-size: 1.4rem;
+      font-family: 'Roboto', sans-serif;
+      padding-left: 3px; }
+
+.modalStyle {
+  z-index: 7000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.modalContent {
+  width: 300px; }
+
+.formWrapper {
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto; }
+
+.quest {
+  margin-bottom: 30px; }
+
+form {
+  margin: auto 0;
+  padding: 0;
+  position: relative; }
+  form h2 {
+    margin: 10px 0px 0px 0px;
+    color: #398449; }
+  form .plantName,
+  form .plantSpecies,
+  form .plantWaterQuant,
+  form .plantCare {
+    border: 0;
+    margin-top: 25px;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    -webkit-appearance: none;
+    border-radius: 0; }
+    form .plantName label,
+    form .plantSpecies label,
+    form .plantWaterQuant label,
+    form .plantCare label {
+      font-size: 2rem;
+      margin-bottom: 5px;
+      color: #398449; }
+    form .plantName input,
+    form .plantSpecies input,
+    form .plantWaterQuant input,
+    form .plantCare input {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 1px solid #4a4a4a;
+      background: transparent;
+      font-size: 1.6rem; }
+    form .plantName textarea,
+    form .plantSpecies textarea,
+    form .plantWaterQuant textarea,
+    form .plantCare textarea {
+      resize: none; }
+  form .plantCare {
+    margin-bottom: 10px; }
+  form .plantTypes p,
+  form .plantPic p,
+  form .plantWaterFreq p,
+  form .plantSunExposure p {
+    color: #398449;
+    font-size: 2rem;
+    margin-bottom: 5px; }
+  form .plantTypes div,
+  form .plantPic div,
+  form .plantWaterFreq div,
+  form .plantSunExposure div {
+    margin-bottom: 5px; }
+
+.btnContainer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.btn {
+  padding: 10px 25px;
+  width: 100%;
+  margin-bottom: 10px;
+  -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem; }
+
+.btnSubmit {
+  margin-right: 10px;
+  color: #398449;
+  background-color: #fff;
+  border: 1px solid #398449; }
+  .btnSubmit:hover {
+    background-color: #398449;
+    color: #fff;
+    border: 1px solid #fff; }
+
+.btnClose {
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  border: none;
+  background: transparent;
+  font-size: 2.2rem;
+  color: #4a4a4a; }
+
+header {
+  background-color: white;
+  padding: 15px 0px;
+  width: 100%;
+  height: 13vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: fixed;
+  z-index: 9999; }
+  header .logoContainer {
+    margin: 0;
+    padding: 0;
+    width: 200px; }
+    header .logoContainer img {
+      -o-object-fit: contain;
+         object-fit: contain; }
+
+.plantList {
+  height: calc((100vh - 8vh));
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  overflow: scroll; }
+
+.wrapper {
+  margin: 150px 0 150px 0;
+  height: calc((100vh - 8vh));
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-wrap: none;
+      flex-wrap: none; }
+
+/* iPhone 5 / SE */
+@media (max-width: 350px) {
+  .modalContent {
+    width: 280px; }
+  .plant {
+    position: relative;
+    width: 300px;
+    height: 220px; }
+  .plantSelfie {
+    height: 220px; } }
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 740px) {
+  .plantList {
+    height: calc((100vh - 8vh));
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: center;
+        justify-content: center;
+    overflow: scroll; }
+  .wrapper {
+    height: calc((100vh - 8vh));
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .modalContent {
+    width: 600px;
+    border: 1px solid #4a4a4a;
+    padding: 15px; }
+  .btnClose {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    border: none;
+    background: transparent;
+    font-size: 2.2rem;
+    color: #4a4a4a; }
+  .plantTypeRadio,
+  .plantSunshineAmountRadio,
+  .plantWaterFreqRadio {
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+    .plantTypeRadio div,
+    .plantSunshineAmountRadio div,
+    .plantWaterFreqRadio div {
+      padding-right: 15px;
+      width: 25%; }
+      .plantTypeRadio div input,
+      .plantSunshineAmountRadio div input,
+      .plantWaterFreqRadio div input {
+        height: 3rem;
+        width: 3rem; }
+      .plantTypeRadio div label,
+      .plantSunshineAmountRadio div label,
+      .plantWaterFreqRadio div label {
+        font-size: 1.4rem; }
+  .twoPerLine {
+    display: -ms-flexbox;
+    display: flex; }
+    .twoPerLine .plantName, .twoPerLine .plantPic {
+      margin-right: 20px; }
+    .twoPerLine .plantPic {
+      margin-top: 20px; } }
+
+/* Portrait tablet and small desktops */
+@media (min-width: 1110px) {
+  .plantList {
+    width: 100%;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    height: calc((100vh - 8vh)); }
+  .wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 1180px;
+    margin: 0 auto;
+    height: calc((100vh - 8vh)); }
+  .plant {
+    -ms-flex-positive: 0;
+        flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex-preferred-size: calc(33.333% - 20px);
+        flex-basis: calc(33.333% - 20px);
+    margin: 10px;
+    margin-bottom: 25px; } }
+</style><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_003.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_007.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_005.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_011.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_006.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_002.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_010.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_008.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_009.js"></script><script type="text/javascript" charset="utf-8" src="Plant%20Parenthood_files/0_004.js"></script></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div class="App"><nav class="mainNavigation"><ul><li><div class="addPlantBtn"><i class="fas fa-plus"></i></div></li><li class="logOutBtn"><i class="fas fa-sign-out-alt"></i></li></ul></nav><div><header><figure class="logoContainer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAACFCAYAAAB1065QAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUZFQzNBRUZBODRGMTFFOEE1MTREOThDODVBQjQyOTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUZFQzNBRjBBODRGMTFFOEE1MTREOThDODVBQjQyOTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1RkVDM0FFREE4NEYxMUU4QTUxNEQ5OEM4NUFCNDI5NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1RkVDM0FFRUE4NEYxMUU4QTUxNEQ5OEM4NUFCNDI5NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkoZrCAAABwxSURBVHja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" class="AppLogo" alt="logo"></figure></header><section class="plantList"><div class="wrapper"><div id="-LMJc3NI5DKdkcHQRJBc" class="plant"> <div class="cardFront"> <div class="leftSide"><figure class="plantSelfie"><img src="Plant%20Parenthood_files/9e0c4f3159a2a61f230e640ce35e10e2.jpg" alt="Caleb"></figure></div><div class="rightSide"><h3 class="plantName">Caleb</h3><p class="plantSpecies">Fiddle Leaf Fig</p><p class="plantType">Tree</p><div class="clickable flipForward"><i class="fas fa-chevron-right"></i></div></div> </div> <div class="cardBack"> <p class="title"> Caleb the Fiddle Leaf Fig</p><div class="plantStats"><ul><li><p><i class="fas fa-tint"></i>&nbsp;8 ounces, weekly.</p></li><li><p><i class="fas fa-sun"></i> Keep me in indirect light.</p></li><li><p>Use a diluted liquid fertilizer each time you water and every other time during the fall. Do not feed in the winter.</p></li></ul></div><div class="killPlant" id="-LMJc3NI5DKdkcHQRJBc"><i class="fas fa-skull"></i><p>RIP</p></div> <div class="clickable flipBack"><i class="fas fa-chevron-left"></i></div> </div></div><div id="-LMJhucSikIKuMMQkMZL" class="plant"> <div class="cardFront"> <div class="leftSide"><figure class="plantSelfie"><img src="Plant%20Parenthood_files/6af8c043cef649846545c255c885e5af.jpg" alt="James"></figure></div><div class="rightSide"><h3 class="plantName">James</h3><p class="plantSpecies"> Acanthocereus Tetragonus</p><p class="plantType">Cacti</p><div class="clickable flipForward"><i class="fas fa-chevron-right"></i></div></div> </div> <div class="cardBack"> <p class="title"> James the  Acanthocereus Tetragonus</p><div class="plantStats"><ul><li><p><i class="fas fa-tint"></i>&nbsp;1 ounce, every 3 weeks.</p></li><li><p><i class="fas fa-sun"></i> Keep me in direct light.</p></li><li><p>Cacti need perfect growing conditions to produce flowers and the plants in the Cereus family bloom at night. </p></li></ul></div><div class="killPlant" id="-LMJhucSikIKuMMQkMZL"><i class="fas fa-skull"></i><p>RIP</p></div> <div class="clickable flipBack"><i class="fas fa-chevron-left"></i></div> </div></div><div id="-LMJjN4GD-4fjGRMX3cu" class="plant"> <div class="cardFront"> <div class="leftSide"><figure class="plantSelfie"><img src="Plant%20Parenthood_files/84a6de08be0e07189f9df6a82748fdc6.jpg" alt="Karen"></figure></div><div class="rightSide"><h3 class="plantName">Karen</h3><p class="plantSpecies">Zamioculcas Zamifolia</p><p class="plantType">Tropical</p><div class="clickable flipForward"><i class="fas fa-chevron-right"></i></div></div> </div> <div class="cardBack"> <p class="title"> Karen the Zamioculcas Zamifolia</p><div class="plantStats"><ul><li><p><i class="fas fa-tint"></i>&nbsp;Soak and drain, weekly.</p></li><li><p><i class="fas fa-sun"></i> Keep me in indirect light.</p></li><li><p>All parts of the ZZ Plant are toxic to the majority of household pets including cats and dogs as well as people.</p></li></ul></div><div class="killPlant" id="-LMJjN4GD-4fjGRMX3cu"><i class="fas fa-skull"></i><p>RIP</p></div> <div class="clickable flipBack"><i class="fas fa-chevron-left"></i></div> </div></div><div id="-LMJmCdMjj0_m5lxutlX" class="plant"> <div class="cardFront"> <div class="leftSide"><figure class="plantSelfie"><img src="Plant%20Parenthood_files/3d86283d17ea85747e2c4e10f3ea6cf5.jpg" alt="Simon"></figure></div><div class="rightSide"><h3 class="plantName">Simon</h3><p class="plantSpecies">Peace Lily</p><p class="plantType">Tropical</p><div class="clickable flipForward"><i class="fas fa-chevron-right"></i></div></div> </div> <div class="cardBack"> <p class="title"> Simon the Peace Lily</p><div class="plantStats"><ul><li><p><i class="fas fa-tint"></i>&nbsp;Full soak and drain, weekly.</p></li><li><p><i class="fas fa-sun"></i> Keep me in partial light.</p></li><li><p>If wilting every two to three days, repot them in larger containers, which don't need watering as often. </p></li></ul></div><div class="killPlant" id="-LMJmCdMjj0_m5lxutlX"><i class="fas fa-skull"></i><p>RIP</p></div> <div class="clickable flipBack"><i class="fas fa-chevron-left"></i></div> </div></div></div></section></div></div></div>
+
+  <script type="text/javascript" src="Plant%20Parenthood_files/bundle.js"></script>
+
+</body></html>

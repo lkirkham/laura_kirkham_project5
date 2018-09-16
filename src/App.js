@@ -11,7 +11,7 @@ import Form from "./components/Form"
 import PlantList from "./components/PlantLibrary";
 import Nav from "./components/Nav";
 import Welcome from "./components/Welcome";
-import Logo from "./components/Logo"
+
 
 
 // kick off the polyfill! - used for back to top / smooth scrolling. 
@@ -171,7 +171,7 @@ class App extends Component {
           {/* <figure className="logoContainer">
             <img src={pplogo} className="AppLogo" alt="logo" />
           </figure> */}
-          <Logo />
+          {/* <Logo /> */}
           <Form addPlantToDatabase={this.addPlantToDatabase} openModal={this.openModal} closeModal={this.closeModal} isModalOpen={this.state.isModalOpen} />
           {this.state.user ? (
           <Route exact path="/"

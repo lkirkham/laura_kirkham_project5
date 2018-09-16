@@ -256,7 +256,7 @@ handleSubmit = (e) => {
                 e.preventDefault();
                 this.props.closeModal();
               }}>
-              X
+            <i class="fas fa-times"></i>
             </button>
           </form>
         </div>
