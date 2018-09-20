@@ -333,12 +333,11 @@ img {
   position: fixed;
   width: 100%;
   z-index: 60;
-  max-height: 8vh;
-  height: 8vh;
+  height: 60px;
   bottom: 0;
   display: flex;
   justify-content: center;
-  padding: 20px; }
+  padding: 10px; }
   .mainNavigation ul {
     display: flex;
     margin: 0;
@@ -389,7 +388,7 @@ img {
   background-color: rgba(255, 255, 255, 0.25);
   padding: 15px 0px;
   width: 100%;
-  height: 13vh;
+  height: 100px;
   display: flex;
   justify-content: center;
   margin: 0; }
@@ -411,14 +410,14 @@ img {
   /* Do not repeat the image */
   background-size: cover;
   /* Resize the background image to cover the entire container */
-  height: calc(100vh - 8vh);
+  height: 100vh;
   overflow: scroll; }
   .welcome .wrapper {
-    height: calc(100vh - 8vh);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0; }
+    margin: 25px 0 0 0; }
     .welcome .wrapper .letter {
       width: 320px;
       padding: 15px 20px;
@@ -442,78 +441,19 @@ img {
   object-fit: contain;
   margin: 10px auto 0 auto; }
 
-@media (max-width: 325px) {
-  header {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 15px 0px;
-    width: 100%;
-    height: 13vh;
-    display: flex;
-    justify-content: center; }
-    header .logoContainer {
-      margin: 0;
-      padding: 0;
-      width: 100%; }
-      header .logoContainer img {
-        object-fit: contain; }
-  .welcome {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-image: url("../assets/malte-michels-716678-unsplash.jpg");
-    background-position: center;
-    /* Center the image */
-    background-repeat: no-repeat;
-    /* Do not repeat the image */
-    background-size: cover;
-    /* Resize the background image to cover the entire container */
-    height: calc(100vh - 8vh);
-    overflow: scroll; }
-    .welcome .wrapper {
-      height: calc(100vh - 8vh);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: scroll; }
-      .welcome .wrapper .letter {
-        width: 320px;
-        padding: 10px 20px;
-        margin: 80px auto 0px auto;
-        border-radius: 2px; }
-      .welcome .wrapper .greeting {
-        text-align: left;
-        color: #fff;
-        margin: 0;
-        font-size: 2.5rem;
-        width: 100%;
-        line-height: 1;
-        padding: 0 15px; }
-      .welcome .wrapper .greetingCopy {
-        line-height: 1.25;
-        font-size: 1.6rem;
-        margin-top: 10px;
-        text-align: left;
-        color: #fff;
-        padding: 0 15px; }
-  .signature {
-    width: 150px;
-    object-fit: contain;
-    margin: 10px 0 0 0;
-    text-align: left; } }
-
 @media (min-width: 768px) {
-  header {
-    background-color: rgba(255, 255, 255, 0.5);
+  .welcome header {
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 0px;
     width: 100%;
-    height: 13vh;
+    height: 100px;
     display: flex;
     justify-content: center; }
-    header .logoContainer {
+    .welcome header .logoContainer {
       margin: 0;
       padding: 0;
       width: 100%; }
-      header .logoContainer img {
+      .welcome header .logoContainer img {
         object-fit: contain; }
   .welcome {
     display: flex;
@@ -526,17 +466,17 @@ img {
     /* Do not repeat the image */
     background-size: cover;
     /* Resize the background image to cover the entire container */
-    height: calc(87vh -13vh);
+    height: 100vh;
     overflow: scroll; }
     .welcome .wrapper {
-      height: calc(87vh - 13vh);
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center; }
       .welcome .wrapper .letter {
         width: 600px;
         padding: 15px 20px;
-        margin: 200px auto 0px auto;
+        margin: 0px auto 0px auto;
         border-radius: 2px;
         text-align: left; }
       .welcome .wrapper .greeting {
@@ -554,6 +494,66 @@ img {
     width: 150px;
     object-fit: contain;
     margin: 20px 0 0 0; } }
+
+@media (max-width: 325px) {
+  .welcome header {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 0px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center; }
+    .welcome header .logoContainer {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      .welcome header .logoContainer img {
+        object-fit: contain; }
+  .welcome {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    height: 100vh;
+    overflow: scroll; }
+    .welcome .wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: scroll; }
+      .welcome .wrapper .letter {
+        width: 320px;
+        padding: 10px 20px;
+        margin: 30px auto 0px auto;
+        border-radius: 2px; }
+      .welcome .wrapper .greeting {
+        text-align: left;
+        color: #fff;
+        margin: 0;
+        font-size: 1.8rem;
+        width: 100%;
+        line-height: 1;
+        padding: 0 15px; }
+      .welcome .wrapper .greetingCopy {
+        line-height: 1.25;
+        font-size: 1.4rem;
+        margin-top: 10px;
+        text-align: left;
+        color: #fff;
+        padding: 0 15px; }
+  .signature {
+    width: 150px;
+    object-fit: contain;
+    margin: 10px 0 0 0;
+    text-align: left; } }
 
 .App {
   position: relative; }
@@ -733,7 +733,7 @@ header {
   background-color: white;
   padding: 15px 0px;
   width: 100%;
-  height: 13vh;
+  height: 100px;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -753,27 +753,13 @@ header {
   overflow: scroll; }
 
 .wrapper {
-  margin: 130px 0 150px 0;
+  margin: 130px 0 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: none; }
 
-/* iPhone 5 / SE */
-@media (max-width: 350px) {
-  .wrapper {
-    margin: 80px 0 150px 0; }
-  .modalContent {
-    width: 280px; }
-  .plant {
-    position: relative;
-    width: 300px;
-    height: 220px; }
-  .plantSelfie {
-    height: 220px; } }
-
-/* Landscape phone to portrait tablet */
 @media (min-width: 740px) {
   .plantList {
     display: flex;
@@ -836,7 +822,6 @@ header {
     .twoPerLine .plantPic {
       margin-top: 20px; } }
 
-/* Portrait tablet and small desktops */
 @media (min-width: 1110px) {
   .pageContainer {
     display: flex;
@@ -855,7 +840,7 @@ header {
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 110px 0 150px 0; }
+    margin: 110px 0 100px 0; }
   .plant {
     position: relative;
     max-width: 350px;
@@ -866,3 +851,16 @@ header {
     -moz-perspective: 600px;
     -o-perspective: 600px;
     perspective: 600px; } }
+
+/* iPhone 5 / SE */
+@media (max-width: 350px) {
+  .wrapper {
+    margin: 80px 0 100px 0; }
+  .modalContent {
+    width: 280px; }
+  .plant {
+    position: relative;
+    width: 300px;
+    height: 220px; }
+  .plantSelfie {
+    height: 220px; } }

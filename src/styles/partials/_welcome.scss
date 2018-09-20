@@ -2,7 +2,8 @@
     background-color: rgba(255, 255, 255, 0.25);
     padding: 15px 0px;
     width: 100%;
-    height: 13vh;
+    // height: 13vh;
+    height:100px;
     display:flex;
     justify-content: center;
     margin: 0;
@@ -27,14 +28,16 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  height: calc(100vh - 8vh);
+  // height: calc(100vh - 60px);
+  height:100vh;
   overflow: scroll;
   .wrapper {
-    height: calc(100vh - 8vh);
+    // height: calc(100vh - 60px);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 25px 0 0 0;
     .letter {
       width: 320px;
       // border: 1px solid #fff;
@@ -70,86 +73,19 @@
 /////////////////////////////////////
 // Media Queries
 /////////////////////////////////////
-@media (max-width: 325px){
-    header{
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 15px 0px;
-    width: 100%;
-    height: 13vh;
-    display:flex;
-    justify-content: center;
-    // position: fixed;
-    .logoContainer{
-      margin:0;
-      padding:0;
-      width:100%;
-      img{
-        object-fit: contain;
-      }
-    }
-  }
 
-.welcome {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("../assets/malte-michels-716678-unsplash.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  height: calc(100vh - 8vh);
-  overflow: scroll;
-  .wrapper {
-    height: calc(100vh - 8vh);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: scroll;
-    .letter {
-      width: 320px;
-      // border: 1px solid #fff;
-      padding: 10px 20px;
-      margin: 80px auto 0px auto;
-      border-radius: 2px;
-      // margin-bottom: 40px;
-    }
-    .greeting {
-      text-align:left;
-      color: #fff;
-      margin: 0;
-      font-size: 2.5rem;
-      width: 100%;
-      line-height: 1;
-      padding: 0 15px;
-    }
-    .greetingCopy {
-      line-height: 1.25;
-      font-size: 1.6rem;
-      margin-top: 10px;
-      text-align: left;
-      color: #fff;
-      padding: 0 15px;
-    }
-  }
-}
-.signature {
-  width: 150px;
-  object-fit: contain;
-  margin: 10px 0 0 0;
-  text-align: left;
-}
- 
-}
 
+/////////////////// DEKSTOP ////////////////////////////////
 
 
 @media (min-width: 768px) {
-     header{
-    background-color: rgba(255, 255, 255, 0.5);
+     .welcome header{
+    // background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 0px;
     width: 100%;
-    height: 13vh;
-    display:flex;
+    height: 100px;
+    display: flex;
     justify-content: center;
     // position: fixed;
     .logoContainer{
@@ -170,10 +106,10 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  height: calc(87vh -13vh);
+  height: 100vh;
   overflow: scroll;
   .wrapper {
-    height: calc(87vh - 13vh);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,7 +117,7 @@
       width: 600px;
       // border: 1px solid #fff;
       padding: 15px 20px;
-      margin: 200px auto 0px auto;
+      margin: 0px auto 0px auto;
       border-radius: 2px;
       text-align: left;
       // margin-bottom: 40px;
@@ -212,97 +148,79 @@
 }
 
 
+//////////////////// IPHONE SE / 5 //////////////////////////////
+
+@media (max-width: 325px){
+    .welcome header{
+    background-color: rgba(255, 255, 255, 0.5);
+     background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 0px;
+    width: 100%;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    // position: fixed;
+    .logoContainer{
+      margin:0;
+      padding:0;
+      width:100%;
+      img{
+        object-fit: contain;
+      }
+    }
+  }
+
+.welcome {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 100vh;
+  overflow: scroll;
+  .wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    .letter {
+      width: 320px;
+      // border: 1px solid #fff;
+      padding: 10px 20px;
+      margin: 30px auto 0px auto;
+      border-radius: 2px;
+      // margin-bottom: 40px;
+    }
+    .greeting {
+      text-align:left;
+      color: #fff;
+      margin: 0;
+      font-size: 1.8rem;
+      width: 100%;
+      line-height: 1;
+      padding: 0 15px;
+    }
+    .greetingCopy {
+      line-height: 1.25;
+      font-size: 1.4rem;
+      margin-top: 10px;
+      text-align: left;
+      color: #fff;
+      padding: 0 15px;
+    }
+  }
+}
+.signature {
+  width: 150px;
+  object-fit: contain;
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+ 
+}
 
 
-// @media (min-width: 768px) {
-//   .welcome {
-//     height: 87vh;
-//     justify-content: flex-start;
-//     header {
-//     }
-//     .wrapper {
-//       height: 87vh;
-//       align-items: center;
-//       .letter {
-//         width: 575px;
-//         padding: 20px 25px;
-//         .greeting {
-//           color: #fff;
-//           margin: 0;
-//           font-size: 4rem;
-//         }
-//         .greetingCopy {
-//           font-size: 2rem;
-//         }
-//       }
-//     }
-//     .signature {
-//       margin-top: 15px;
-//       width: 200px;
-//       object-fit: contain;
-//     }
-//   }
-// }
 
-// @media (min-width: 450px) and (max-width: 767px) {
-//   .logoContainer {
-//     width: 60%;
-//     justify-content: flex-start;
-//   }
-//   .welcome {
-//     height: 87vh;
-//     justify-content: flex-start;
-//     .wrapper {
-//       height: 87vh;
-//       align-items: center;
-//       .letter {
-//         width: 440px;
-//         padding: 20px 25px;
-//         .greeting {
-//           color: #fff;
-//           margin: 0;
-//           font-size: 3rem;
-//           .greetingCopy {
-//             font-size: 2rem;
-//           }
-//         }
-//       }
-//     }
-//     .signature {
-//       margin-top: 15px;
-//       width: 200px;
-//       object-fit: contain;
-//     }
-//   }
-// }
-
-// // iPhone SE
-// @media (max-width: 330px) {
-//   .welcome {
-//     height: 87vh;
-//     justify-content: flex-start;
-//     header {
-//     }
-//     .wrapper {
-//       height: 87vh;
-//       align-items: flex-start;
-//       .letter {
-//         width: 315px;
-//         padding: 20px 25px;
-//         .greeting {
-//           color: #fff;
-//           margin: 0;
-//           font-size: 2rem;
-//         }
-//         .greetingCopy {
-//           font-size: 1.4rem;
-//         }
-//       }
-//     }
-//     .signature {
-//       margin-top: 15px;
-//       width: 150px;
-//       object-fit: contain;
-//     }
-//   }
-// }
