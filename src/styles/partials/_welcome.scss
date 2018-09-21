@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+  
+  
   .welcome header{
-    background-color: rgba(255, 255, 255, 0.25);
+    // background-color: rgba(0, 0, 0, 0.25);
+    background-color: transparent;
     padding: 15px 0px;
     width: 100%;
     // height: 13vh;
@@ -20,11 +24,14 @@
     }
   }
 
+
+
 .welcome {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+  // background-image: url("../../assets/malte-michels-716678-unsplash.jpg");
+  background-image: url("../assets/bart-zimny-345682-unsplash.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -33,13 +40,14 @@
   overflow: scroll;
   .wrapper {
     // height: calc(100vh - 60px);
+    
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 25px 0 0 0;
     .letter {
-      width: 320px;
+      width: 400px;
       // border: 1px solid #fff;
       padding: 15px 20px;
       margin: 50px auto 0px auto;
@@ -54,21 +62,60 @@
       font-size: 3rem;
       width: 100%;
       line-height: 1.25;
+      font-family: 'Roboto', sans-serif;
     }
     .greetingCopy {
       font-size: 1.6rem;
       margin-top: 10px;
       text-align: center;
       color: #fff;
+      
     }
   }
 }
-.signature {
 
-  width: 150px;
-  object-fit: contain;
-  margin: 10px auto 0 auto;
+//neon
+// $colour: #FF1166;
+$colour: rgb(192, 180, 180);
+//$colour: #228DFF;
+
+.neon {
+  text-align: center;
+  font-size: 6rem;
+  font-family: 'Sacramento', cursive;
+  font-weight: normal;
+  color: lighten($colour, 45%);
+  animation: neon 1.5s ease-in-out infinite alternate;
+  margin:25px;
 }
+
+@keyframes neon {
+  from {
+    text-shadow:
+      0 0 5px white,
+      0 0 10px transparentize(white, 0.5),
+      0 0 15px transparentize(white, 0.75),
+      0 0 20px $colour,
+      0 0 35px $colour,
+      0 0 40px $colour,
+      0 0 50px $colour,
+      0 0 75px $colour,
+      0 0 85px black;
+  }
+  to {
+    text-shadow:
+      0 0 5px white,
+      0 0 15px transparentize(white, 0.25),
+      0 0 20px transparentize(white, 0.5),
+      0 0 30px $colour,
+      0 0 45px $colour,
+      0 0 50px $colour,
+      0 0 60px $colour,
+      0 0 85px $colour,
+      0 0 95px black;
+  }
+}
+
 
 /////////////////////////////////////
 // Media Queries
@@ -81,7 +128,7 @@
 @media (min-width: 768px) {
      .welcome header{
     // background-color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
+    // background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 0px;
     width: 100%;
     height: 100px;
@@ -102,7 +149,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+  // background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+    background-image: url("../assets/bart-zimny-345682-unsplash.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -119,7 +167,7 @@
       padding: 15px 20px;
       margin: 0px auto 0px auto;
       border-radius: 2px;
-      text-align: left;
+      text-align: center;
       // margin-bottom: 40px;
       
     }
@@ -133,8 +181,9 @@
     .greetingCopy {
       font-size: 1.6rem;
       margin-top: 10px;
-      text-align: left;
+      text-align: center;
       color: #fff;
+      font-weight: 500;
     }
   }
 }
@@ -142,6 +191,16 @@
   width: 150px;
   object-fit: contain;
   margin: 20px 0 0 0;
+}
+
+.neon {
+  text-align: center;
+  font-size: 10rem;
+  font-family: 'Sacramento', cursive;
+  font-weight: normal;
+  color: lighten($colour, 45%);
+  animation: neon 1.5s ease-in-out infinite alternate;
+  margin:25px;
 }
 
 
@@ -163,18 +222,27 @@
     .logoContainer{
       margin:0;
       padding:0;
-      width:100%;
+      width:60%;
       img{
         object-fit: contain;
       }
     }
   }
 
+  .neon {
+  text-align: center;
+  font-size: 4.5rem;
+  font-family: 'Sacramento', cursive;
+  line-height: 1;
+
+}
+
 .welcome {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+  // background-image: url("../assets/malte-michels-716678-unsplash.jpg");
+  background-image: url("../assets/bart-zimny-345682-unsplash.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -195,7 +263,7 @@
       // margin-bottom: 40px;
     }
     .greeting {
-      text-align:left;
+      text-align:center;
       color: #fff;
       margin: 0;
       font-size: 1.8rem;
@@ -207,7 +275,7 @@
       line-height: 1.25;
       font-size: 1.4rem;
       margin-top: 10px;
-      text-align: left;
+      text-align: center;
       color: #fff;
       padding: 0 15px;
     }
