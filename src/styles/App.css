@@ -422,7 +422,7 @@ img {
     .welcome .wrapper .letter {
       width: 400px;
       padding: 15px 20px;
-      margin: 50px auto 0px auto;
+      margin: 25px auto 0px auto;
       border-radius: 2px;
       text-align: center; }
     .welcome .wrapper .greeting {
@@ -452,6 +452,17 @@ img {
     text-shadow: 0 0 5px white, 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.25), 0 0 20px #c0b4b4, 0 0 35px #c0b4b4, 0 0 40px #c0b4b4, 0 0 50px #c0b4b4, 0 0 75px #c0b4b4, 0 0 85px black; }
   to {
     text-shadow: 0 0 5px white, 0 0 15px rgba(255, 255, 255, 0.75), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px #c0b4b4, 0 0 45px #c0b4b4, 0 0 50px #c0b4b4, 0 0 60px #c0b4b4, 0 0 85px #c0b4b4, 0 0 95px black; } }
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 800;
+  animation: dash 6s linear alternate infinite; }
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1100; }
+  to {
+    stroke-dashoffset: 0; } }
 
 @media (min-width: 768px) {
   .welcome header {

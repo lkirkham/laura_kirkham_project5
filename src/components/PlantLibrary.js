@@ -20,6 +20,11 @@ render(){
       </header>
       <section className="plantList">
         <div className="wrapper">
+        {/* {this.props.listOfPlants.length === 0 ? (
+          <p>
+            <em>You don't have any plants yet.<br /> Add your first plant by using the "+" symbol at the bottom of the screen.</em>
+          </p>) : ( */}
+
           {this.props.listOfPlants.map(plant => {
             return <div id={plant.key} className="plant" key={plant.key}>
                 {" "}
@@ -88,6 +93,7 @@ render(){
                 {/*closes cardBack*/}
               </div> /*closes plant*/;
           })}
+          {/* )} */}
         </div>
       </section>
     </div>;

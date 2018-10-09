@@ -50,7 +50,7 @@
       width: 400px;
       // border: 1px solid #fff;
       padding: 15px 20px;
-      margin: 50px auto 0px auto;
+      margin: 25px auto 0px auto;
       border-radius: 2px;
       text-align:center;
       // margin-bottom: 40px;
@@ -113,6 +113,23 @@ $colour: rgb(192, 180, 180);
       0 0 60px $colour,
       0 0 85px $colour,
       0 0 95px black;
+  }
+}
+
+
+/////svg animation
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 800;
+  animation: dash 6s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1100;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
