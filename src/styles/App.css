@@ -404,8 +404,8 @@ img {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url("../assets/bart-zimny-345682-unsplash.jpg");
-  background-position: center;
+  background-image: url("../assets/bg-plant-girl1.png");
+  background-position: 68% 0;
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
@@ -425,6 +425,11 @@ img {
       margin: 25px auto 0px auto;
       border-radius: 2px;
       text-align: center; }
+    .welcome .wrapper .welcomeHeading {
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      text-align: center; }
     .welcome .wrapper .greeting {
       color: #fff;
       margin: 0;
@@ -432,11 +437,6 @@ img {
       width: 100%;
       line-height: 1.25;
       font-family: 'Roboto', sans-serif; }
-    .welcome .wrapper .greetingCopy {
-      font-size: 1.6rem;
-      margin-top: 10px;
-      text-align: center;
-      color: #fff; }
 
 .neon {
   text-align: center;
@@ -481,7 +481,7 @@ img {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url("../assets/bart-zimny-345682-unsplash.jpg");
+    background-image: url("../assets/bg-plant-girl1.png");
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
@@ -550,7 +550,7 @@ img {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url("../assets/bart-zimny-345682-unsplash.jpg");
+    background-image: url("../assets/bg-plant-girl1.png");
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
@@ -577,13 +577,6 @@ img {
         font-size: 1.8rem;
         width: 100%;
         line-height: 1;
-        padding: 0 15px; }
-      .welcome .wrapper .greetingCopy {
-        line-height: 1.25;
-        font-size: 1.4rem;
-        margin-top: 10px;
-        text-align: center;
-        color: #fff;
         padding: 0 15px; }
   .signature {
     width: 150px;

@@ -31,8 +31,9 @@
   align-items: center;
   flex-direction: column;
   // background-image: url("../../assets/malte-michels-716678-unsplash.jpg");
-  background-image: url("../assets/bart-zimny-345682-unsplash.jpg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/bg-plant-girl1.png");
+  background-position: 68% 0;
+  /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   // height: calc(100vh - 60px);
@@ -56,6 +57,12 @@
       // margin-bottom: 40px;
       
     }
+    .welcomeHeading{
+color:#fff;
+font-family: 'Montserrat', sans-serif;
+font-weight: 900;
+text-align:center;
+    }
     .greeting {
       color: #fff;
       margin: 0;
@@ -63,13 +70,6 @@
       width: 100%;
       line-height: 1.25;
       font-family: 'Roboto', sans-serif;
-    }
-    .greetingCopy {
-      font-size: 1.6rem;
-      margin-top: 10px;
-      text-align: center;
-      color: #fff;
-      
     }
   }
 }
@@ -167,7 +167,7 @@ $colour: rgb(192, 180, 180);
   align-items: center;
   flex-direction: column;
   // background-image: url("../assets/malte-michels-716678-unsplash.jpg");
-    background-image: url("../assets/bart-zimny-345682-unsplash.jpg");
+    background-image: url("../assets/bg-plant-girl1.png");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -259,7 +259,7 @@ $colour: rgb(192, 180, 180);
   align-items: center;
   flex-direction: column;
   // background-image: url("../assets/malte-michels-716678-unsplash.jpg");
-  background-image: url("../assets/bart-zimny-345682-unsplash.jpg");
+  background-image: url("../assets/bg-plant-girl1.png");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -286,14 +286,6 @@ $colour: rgb(192, 180, 180);
       font-size: 1.8rem;
       width: 100%;
       line-height: 1;
-      padding: 0 15px;
-    }
-    .greetingCopy {
-      line-height: 1.25;
-      font-size: 1.4rem;
-      margin-top: 10px;
-      text-align: center;
-      color: #fff;
       padding: 0 15px;
     }
   }
