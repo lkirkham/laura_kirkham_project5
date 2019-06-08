@@ -1,6 +1,5 @@
 //Plant Parenthood
 import React, {Component } from 'react';
-import pplogoKO from "../assets/pplogoKO.png";
 import googleSignIn from "../assets/btn_google_signin.png"
 // import smoothscroll from 'smoothscroll-polyfill';
 // kick off the polyfill!
@@ -13,11 +12,7 @@ class Nav extends Component {
   render(){
     return <nav className="mainNavigation">
         <ul>
-          {/* <li>
-          <figure className="logoContainer">
-            <img src={pplogoKO} alt="logo" />
-          </figure>
-          </li> */}
+
           {this.props.user ? <li>
               <div className="addPlantBtn" onClick={e => {
                   this.props.openModal();

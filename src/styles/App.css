@@ -396,14 +396,14 @@ img {
   /* Resize the background image to cover the entire container */
   height: 100vh;
   overflow: scroll; }
-  .welcome .wrapper {
-    height: 100vh;
+  .welcome .welcomeWrapper {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 25px 0 0 0;
     padding: 0 25px; }
-    .welcome .wrapper .welcomeHeading {
+    .welcome .welcomeWrapper .welcomeHeading {
       color: #fff;
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 3rem;
@@ -411,13 +411,52 @@ img {
       text-align: center;
       line-height: 1;
       margin: 10 0; }
-    .welcome .wrapper .welcomeCopy {
+    .welcome .welcomeWrapper .welcomeCopy {
       color: #fff;
       margin: 0;
       font-size: 1.4rem;
       text-align: center;
       line-height: 1.25;
       font-family: 'Montserrat', Arial, sans-serif; }
+
+.welcomeSteps {
+  height: 100vh;
+  background-color: #e8ded6;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 50px 25px; }
+  .welcomeSteps .welcomeWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center; }
+    .welcomeSteps .welcomeWrapper .stepsWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%; }
+      .welcomeSteps .welcomeWrapper .stepsWrapper .step {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        width: 150px; }
+        .welcomeSteps .welcomeWrapper .stepsWrapper .step p {
+          height: 30px; }
+        .welcomeSteps .welcomeWrapper .stepsWrapper .step .stepImage {
+          width: 100px;
+          height: auto; }
+    .welcomeSteps .welcomeWrapper .welcomeSubtitle {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 3rem;
+      text-align: center;
+      color: #253216; }
 
 @media (min-width: 768px) {
   .welcome {
@@ -433,21 +472,21 @@ img {
     /* Resize the background image to cover the entire container */
     height: 80vh;
     overflow: scroll; }
-    .welcome .wrapper {
-      height: 100vh;
+    .welcome .welcomeWrapper {
+      height: 100%;
       display: flex;
       align-items: center; }
-      .welcome .wrapper .welcomeContainer {
+      .welcome .welcomeWrapper .welcomeContainer {
         position: absolute;
         right: 150px;
         top: 200px; }
-      .welcome .wrapper .welcomeHeading {
+      .welcome .welcomeWrapper .welcomeHeading {
         color: #fff;
         font-family: 'Montserrat', Arial, sans-serif;
         font-size: 6rem;
         font-weight: 900;
         text-align: left; }
-      .welcome .wrapper .welcomeCopy {
+      .welcome .welcomeWrapper .welcomeCopy {
         width: 550px;
         color: #fff;
         margin: 0;
@@ -455,8 +494,10 @@ img {
         text-align: left;
         line-height: 1.25;
         font-family: 'Montserrat', Arial, sans-serif; }
-  .welcomeSteps {
-    height: 100vh; } }
+  .welcomeSteps .welcomeWrapper {
+    height: 100%; }
+    .welcomeSteps .welcomeWrapper .welcomeSubtitle {
+      font-size: 3rem; } }
 
 .App {
   position: relative; }
