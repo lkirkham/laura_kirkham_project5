@@ -1,13 +1,14 @@
 // NAV
 .mainNavigation {
-  background-color: #398449;
+  background-color: #565d46;
   position: fixed;
   width: 100%;
   z-index: 60;
-  height:60px;
+  height:70px;
   bottom: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 10px;
 
   ul {
@@ -33,11 +34,11 @@
   }
 }
 
-.google {
-  margin-bottom:-2px;
-  width: 1.6rem;
-  height: auto;
-}
+// .google {
+//   margin-bottom:-2px;
+//   width: 1.6rem;
+//   height: auto;
+// }
 
 .logOutBtn, .logInBtn,  
 .addPlantBtn {
@@ -45,9 +46,10 @@
   color: white;
 }
 
-.aboutBtn,  {
+.googleBtn{
+  width:200px;
+  padding-top:10px;
   color: #cccccc;
-
 }
 
 
