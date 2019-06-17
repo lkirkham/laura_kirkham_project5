@@ -394,15 +394,21 @@ img {
   /* Do not repeat the image */
   background-size: cover;
   /* Resize the background image to cover the entire container */
-  height: 100vh;
+  height: 70vh;
   overflow: scroll; }
+  .welcome .logoko {
+    margin: 25px 0;
+    width: 200px;
+    height: auto;
+    justify-self: start; }
   .welcome .welcomeWrapper {
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 25px 0 0 0;
-    padding: 0 25px; }
+    margin-top: 0;
+    padding: 0 25px 50px 25px; }
     .welcome .welcomeWrapper .welcomeHeading {
       color: #fff;
       font-family: 'Montserrat', Arial, sans-serif;
@@ -420,18 +426,19 @@ img {
       font-family: 'Montserrat', Arial, sans-serif; }
 
 .welcomeSteps {
-  height: 100vh;
+  height: 100%;
   background-color: #e8ded6;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 50px 25px; }
+  padding: 35px 25px 100px 25px; }
   .welcomeSteps .welcomeWrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center; }
     .welcomeSteps .welcomeWrapper .stepsWrapper {
+      margin-top: 50px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -443,8 +450,11 @@ img {
         justify-content: flex-start;
         align-items: center;
         text-align: center;
-        width: 150px; }
+        width: 50%;
+        max-width: 200px; }
         .welcomeSteps .welcomeWrapper .stepsWrapper .step p {
+          font-family: 'Montserrat', Arial, sans-serif;
+          color: #253216;
           height: 30px; }
         .welcomeSteps .welcomeWrapper .stepsWrapper .step .stepImage {
           width: 100px;
@@ -471,15 +481,25 @@ img {
     background-size: cover;
     /* Resize the background image to cover the entire container */
     height: 80vh;
-    overflow: scroll; }
+    overflow: scroll;
+    padding: 0 50px; }
+    .welcome .logoko {
+      margin: 25px 0;
+      width: 200px;
+      height: auto;
+      align-self: flex-start; }
     .welcome .welcomeWrapper {
       height: 100%;
+      width: 100%;
+      max-width: 1200px;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      position: relative; }
       .welcome .welcomeWrapper .welcomeContainer {
         position: absolute;
-        right: 150px;
-        top: 200px; }
+        right: 0px;
+        top: 200px;
+        width: 600px; }
       .welcome .welcomeWrapper .welcomeHeading {
         color: #fff;
         font-family: 'Montserrat', Arial, sans-serif;
@@ -494,10 +514,31 @@ img {
         text-align: left;
         line-height: 1.25;
         font-family: 'Montserrat', Arial, sans-serif; }
-  .welcomeSteps .welcomeWrapper {
-    height: 100%; }
-    .welcomeSteps .welcomeWrapper .welcomeSubtitle {
-      font-size: 3rem; } }
+  .welcomeSteps {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 25px 100px 25px; }
+    .welcomeSteps .welcomeWrapper {
+      height: 100%;
+      flex-direction: column;
+      align-items: center; }
+      .welcomeSteps .welcomeWrapper .stepsWrapper {
+        width: 90%;
+        align-items: center;
+        justify-content: center; }
+        .welcomeSteps .welcomeWrapper .stepsWrapper .step {
+          width: 30%;
+          max-width: 300px; }
+          .welcomeSteps .welcomeWrapper .stepsWrapper .step p {
+            width: 80%; }
+      .welcomeSteps .welcomeWrapper .welcomeSubtitle {
+        font-size: 3rem; } }
+
+@media (max-width: 325px) {
+  .welcomeSteps .welcomeWrapper .stepsWrapper .step {
+    width: 100%; } }
 
 .App {
   position: relative; }
@@ -525,6 +566,10 @@ p {
   font-size: 1.4rem;
   font-family: 'Roboto', sans-serif;
   margin: 5px 0; }
+
+.emptyGreenhouse {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center; }
 
 fieldset {
   border: none;
@@ -571,7 +616,9 @@ fieldset {
   align-items: center; }
 
 .modalContent {
-  width: 300px; }
+  width: 300px;
+  padding-top: 25px;
+  padding-bottom: 75px; }
 
 .formWrapper {
   margin: 0 auto;
@@ -666,8 +713,8 @@ form {
 
 .btnClose {
   position: absolute;
-  top: 10px;
-  right: -15px;
+  top: 15px;
+  right: -25px;
   border: none;
   background: transparent;
   font-size: 2.2rem;
@@ -694,15 +741,21 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  overflow: scroll; }
+  overflow: hidden;
+  padding-bottom: 75px; }
 
-.wrapper {
-  margin: 130px 0 100px 0;
+.plantList::-webkit-scrollbar {
+  width: 0 !important; }
+
+.plantList.wrapper {
+  margin: 130px 0 150px 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: none; }
+  flex-wrap: none;
+  padding: 0 15px; }
 
 @media (min-width: 740px) {
   .plantList {
@@ -718,7 +771,7 @@ header {
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 110px 0 150px 0; }
+    margin: 110px 0 0 0; }
   .plant {
     position: relative;
     max-width: 350px;
@@ -730,13 +783,13 @@ header {
     -o-perspective: 600px;
     perspective: 600px; }
   .modalContent {
-    width: 600px;
+    width: 650px;
     border: 1px solid #4a4a4a;
     padding: 15px; }
   .btnClose {
     position: absolute;
     top: 10px;
-    right: 0px;
+    right: 10px;
     border: none;
     background: transparent;
     font-size: 2.2rem;
@@ -764,7 +817,8 @@ header {
     .twoPerLine .plantName, .twoPerLine .plantPic {
       margin-right: 20px; }
     .twoPerLine .plantPic {
-      margin-top: 20px; } }
+      margin-top: 20px;
+      width: 50%; } }
 
 @media (min-width: 1110px) {
   .pageContainer {
@@ -776,15 +830,14 @@ header {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    overflow: scroll; }
+    overflow: hidden; }
   .wrapper {
     width: 1080px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    margin: 110px 0 100px 0; }
+    flex-wrap: wrap; }
   .plant {
     position: relative;
     max-width: 350px;

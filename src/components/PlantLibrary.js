@@ -20,12 +20,13 @@ render(){
       </header>
       <section className="plantList">
         <div className="wrapper">
-        {/* {this.props.listOfPlants.length === 0 ? (
-          <p>
-            <em>You don't have any plants yet.<br /> Add your first plant by using the "+" symbol at the bottom of the screen.</em>
-          </p>) : ( */}
+        {this.props.listOfPlants.length == 0 ? (
+          <p className="emptyGreenhouse">
+            You don't have any plants babies in your digital greenhouse yet. Start adding plants by using the + at the bottom of the screen.
+          </p>
+          ) : (
 
-          {this.props.listOfPlants.map(plant => {
+          this.props.listOfPlants.map(plant => {
             return <div id={plant.key} className="plant" key={plant.key}>
                 {" "}
                 {/*opens plant*/}
@@ -92,7 +93,8 @@ render(){
                 </div>
                 {/*closes cardBack*/}
               </div> /*closes plant*/;
-          })}
+          })
+          )}
           {/* )} */}
         </div>
       </section>

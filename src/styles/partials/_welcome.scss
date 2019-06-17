@@ -17,16 +17,24 @@
   background-size: cover;
   /* Resize the background image to cover the entire container */
   // height: calc(100vh - 60px);
-  height: 100vh;
+  height: 70vh;
   overflow: scroll;
+
+      .logoko {
+        margin: 25px 0;
+        width: 200px;
+        height: auto;
+        justify-self: start;
+      }
 
   .welcomeWrapper {
     height:100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 25px 0 0 0;
-    padding: 0 25px;
+    margin-top: 0;
+    padding: 0 25px 50px 25px;
 
     .welcomeHeading {
       color: #fff;
@@ -50,12 +58,12 @@
 }
 
   .welcomeSteps {
-    height: 100vh;
+    height: 100%;
     background-color: #e8ded6;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    padding: 50px 25px;
+    padding: 35px 25px 100px 25px;
 
     .welcomeWrapper {
       // height: 100%;
@@ -65,6 +73,7 @@
       justify-content:center;
 
       .stepsWrapper{
+        margin-top:50px;
         display:flex;
         flex-wrap:wrap;
         // align-items: center;
@@ -77,9 +86,12 @@
           justify-content:flex-start;
           align-items:center;
           text-align:center;
-          width:150px;
+          width:50%;
+          max-width:200px;
 
         p{
+          font-family: 'Montserrat', Arial, sans-serif;
+          color:#253216;
           height:30px;
         }
 
@@ -128,15 +140,28 @@
     /* Resize the background image to cover the entire container */
     height: 80vh;
     overflow: scroll;
+    padding:0 50px;
+
+          .logoko {
+            margin: 25px 0;
+            width: 200px;
+            height: auto;
+            align-self: flex-start;
+          }
+
 
     .welcomeWrapper {
       height:100%;
+      width:100%;
+      max-width:1200px;
       display: flex;
       align-items: center;
+      position:relative;
       .welcomeContainer{
         position:absolute;
-        right:150px;
+        right:0px;
         top:200px;
+        width:600px;
       }
       .welcomeHeading {
         color: #fff;
@@ -158,14 +183,31 @@
     }
   }
   .welcomeSteps{
-    // height:100vh;
+    height:100%;
     // background-color: #e8ded6;
-    //   display: flex;
-    //   align-items: center;
-    //   flex-direction: column;
-    //   padding: 50px 25px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 50px 25px 100px 25px;
+      
     .welcomeWrapper{
       height:100%;
+      flex-direction:column;
+      align-items:center;
+
+      .stepsWrapper {
+
+        width: 90%;
+        align-items:center;
+        justify-content:center;
+        .step {
+          width:30%;
+          max-width:300px;
+          p{
+            width:80%
+          }
+        }
+      }
 
       .welcomeSubtitle{
         font-size: 3rem;
@@ -177,6 +219,17 @@
 
 //////////////////// IPHONE SE / 5 //////////////////////////////
 
-// @media (max-width: 325px){
-//     
-// }
+@media (max-width: 325px){
+    
+.welcomeSteps {
+  .welcomeWrapper {
+    .stepsWrapper {
+      .step {
+        width:100%;
+      }
+    }
+  }
+}
+
+
+}
