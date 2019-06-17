@@ -246,6 +246,7 @@ margin: auto 0;
 
 
 .plantList {
+  padding-top:75px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -377,6 +378,7 @@ margin: auto 0;
     margin:0 auto;
   }
  .plantList {
+   padding-top:0px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
