@@ -1,10 +1,11 @@
 // NAV
 .mainNavigation {
-  background-color: #565d46;
+  // background-color: #565d46;
+  background-color: #333;
   position: fixed;
   width: 100%;
   z-index: 60;
-  height:70px;
+  height:80px;
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -34,6 +35,8 @@
   }
 }
 
+
+
 // .google {
 //   margin-bottom:-2px;
 //   width: 1.6rem;
@@ -47,7 +50,7 @@
 }
 
 .googleBtn{
-  width:200px;
+  width:175px;
   padding-top:10px;
   color: #cccccc;
 }

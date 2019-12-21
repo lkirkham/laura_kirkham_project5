@@ -12,6 +12,7 @@ class Nav extends Component {
   render(){
     return <nav className="mainNavigation">
         <ul>
+          
 
           {this.props.user ? <li>
               <div className="addPlantBtn" onClick={e => {

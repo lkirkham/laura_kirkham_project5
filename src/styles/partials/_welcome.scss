@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto:400,700&display=swap');
 
 
 /////////////////// MOBILE ////////////////////////////////
@@ -9,20 +10,20 @@
   align-items: center;
   flex-direction: column;
   // background-image: url("../../assets/malte-michels-716678-unsplash.jpg");
-  background-image: url("../assets/bg-plant-girl1.png");
-  background-position: 68% 0;
+  background-image: url("../assets/bg-plant-woman.jpeg");
+  background-position: 30% 0;
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
   background-size: cover;
   /* Resize the background image to cover the entire container */
   // height: calc(100vh - 60px);
-  height: 70vh;
+  height: 100vh;
   overflow: scroll;
 
       .logoko {
         margin: 25px 0;
-        width: 200px;
+        width: 150px;
         height: auto;
         justify-self: start;
       }
@@ -35,6 +36,8 @@
     align-items: center;
     margin-top: 0;
     padding: 0 25px 50px 25px;
+    .welcomeContainer{
+      width: 90%;
 
     .welcomeHeading {
       color: #fff;
@@ -54,6 +57,7 @@
       line-height: 1.25;
       font-family: 'Montserrat', Arial, sans-serif;
     }
+  }
   }
 }
 
@@ -131,48 +135,57 @@
     align-items: center;
     flex-direction: column;
     // background-image: url("../assets/malte-michels-716678-unsplash.jpg");
-    background-image: url("../assets/bg-plant-girl1.png");
+    background-image: url("../assets/bg-plant-woman.jpeg");
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
     /* Do not repeat the image */
     background-size: cover;
     /* Resize the background image to cover the entire container */
-    height: 80vh;
+    height: 100vh;
     overflow: scroll;
     padding:0 50px;
 
           .logoko {
             margin: 25px 0;
-            width: 200px;
+            width: 150px;
             height: auto;
-            align-self: flex-start;
+            align-self: center;
           }
 
 
     .welcomeWrapper {
       height:100%;
-      width:100%;
-      max-width:1200px;
+      width:95%;
+      max-width:1400px;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
+      justify-content: flex-end;
       position:relative;
       .welcomeContainer{
         position:absolute;
-        right:0px;
-        top:200px;
-        width:600px;
+       margin-top: -200px;
+       width:100%;
+        max-width:600px;
       }
       .welcomeHeading {
         color: #fff;
         font-family: 'Montserrat', Arial, sans-serif;
-        font-size: 6rem;
+        font-size: 4rem;
+        font-weight: 900;
+        text-align: left;
+        margin:20px 0;
+      }
+      .welcomeSubHeading {
+        color:#fff;
+        font-family: 'Montserrat', Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 1.6rem;
         font-weight: 900;
         text-align: left;
       }
 
       .welcomeCopy {
-        width:550px;
         color: #fff;
         margin: 0;
         font-size: 1.6rem;
@@ -182,38 +195,38 @@
       }
     }
   }
-  .welcomeSteps{
-    height:100%;
-    // background-color: #e8ded6;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding: 50px 25px 100px 25px;
+  // .welcomeSteps{
+  //   height:100%;
+  //   // background-color: #e8ded6;
+  //     display: flex;
+  //     align-items: center;
+  //     flex-direction: column;
+  //     padding: 50px 25px 100px 25px;
       
-    .welcomeWrapper{
-      height:100%;
-      flex-direction:column;
-      align-items:center;
+  //   .welcomeWrapper{
+  //     height:100%;
+  //     flex-direction:column;
+  //     align-items:center;
 
-      .stepsWrapper {
+  //     .stepsWrapper {
 
-        width: 90%;
-        align-items:center;
-        justify-content:center;
-        .step {
-          width:30%;
-          max-width:300px;
-          p{
-            width:80%
-          }
-        }
-      }
+  //       width: 90%;
+  //       align-items:center;
+  //       justify-content:center;
+  //       .step {
+  //         width:30%;
+  //         max-width:300px;
+  //         p{
+  //           width:80%
+  //         }
+  //       }
+  //     }
 
-      .welcomeSubtitle{
-        font-size: 3rem;
-      }
-    }
-  }
+  //     .welcomeSubtitle{
+  //       font-size: 3rem;
+  //     }
+  //   }
+  // }
 }
 
 
