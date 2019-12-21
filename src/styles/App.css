@@ -428,49 +428,6 @@ img {
         line-height: 1.25;
         font-family: 'Montserrat', Arial, sans-serif; }
 
-.welcomeSteps {
-  height: 100%;
-  background-color: #e8ded6;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 35px 25px 100px 25px; }
-  .welcomeSteps .welcomeWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center; }
-    .welcomeSteps .welcomeWrapper .stepsWrapper {
-      margin-top: 50px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%; }
-      .welcomeSteps .welcomeWrapper .stepsWrapper .step {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        text-align: center;
-        width: 50%;
-        max-width: 200px; }
-        .welcomeSteps .welcomeWrapper .stepsWrapper .step p {
-          font-family: 'Montserrat', Arial, sans-serif;
-          color: #253216;
-          height: 30px; }
-        .welcomeSteps .welcomeWrapper .stepsWrapper .step .stepImage {
-          width: 100px;
-          height: auto; }
-    .welcomeSteps .welcomeWrapper .welcomeSubtitle {
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 300;
-      font-size: 3rem;
-      text-align: center;
-      color: #253216; }
-
 @media (min-width: 768px) {
   .welcome {
     display: flex;
@@ -504,31 +461,27 @@ img {
         margin-top: -200px;
         width: 100%;
         max-width: 600px; }
-      .welcome .welcomeWrapper .welcomeHeading {
-        color: #fff;
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-size: 4rem;
-        font-weight: 900;
-        text-align: left;
-        margin: 20px 0; }
-      .welcome .welcomeWrapper .welcomeSubHeading {
-        color: #fff;
-        font-family: 'Montserrat', Arial, sans-serif;
-        text-transform: uppercase;
-        font-size: 1.6rem;
-        font-weight: 900;
-        text-align: left; }
-      .welcome .welcomeWrapper .welcomeCopy {
-        color: #fff;
-        margin: 0;
-        font-size: 1.6rem;
-        text-align: left;
-        line-height: 1.25;
-        font-family: 'Montserrat', Arial, sans-serif; } }
-
-@media (max-width: 325px) {
-  .welcomeSteps .welcomeWrapper .stepsWrapper .step {
-    width: 100%; } }
+        .welcome .welcomeWrapper .welcomeContainer .welcomeHeading {
+          color: #fff;
+          font-family: 'Montserrat', Arial, sans-serif;
+          font-size: 4rem;
+          font-weight: 900;
+          text-align: left;
+          margin: 20px 0; }
+        .welcome .welcomeWrapper .welcomeContainer .welcomeSubHeading {
+          color: #fff;
+          font-family: 'Montserrat', Arial, sans-serif;
+          text-transform: uppercase;
+          font-size: 1.6rem;
+          font-weight: 900;
+          text-align: left; }
+        .welcome .welcomeWrapper .welcomeContainer .welcomeCopy {
+          color: #fff;
+          margin: 0;
+          font-size: 1.6rem;
+          text-align: left;
+          line-height: 1.25;
+          font-family: 'Montserrat', Arial, sans-serif; } }
 
 .App {
   position: relative; }

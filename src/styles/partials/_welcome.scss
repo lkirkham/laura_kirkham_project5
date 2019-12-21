@@ -61,63 +61,7 @@
   }
 }
 
-  .welcomeSteps {
-    height: 100%;
-    background-color: #e8ded6;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 35px 25px 100px 25px;
 
-    .welcomeWrapper {
-      // height: 100%;
-      display:flex;
-      flex-wrap:wrap;
-      align-items: flex-start;
-      justify-content:center;
-
-      .stepsWrapper{
-        margin-top:50px;
-        display:flex;
-        flex-wrap:wrap;
-        // align-items: center;
-        justify-content:center;
-        width:100%;
-        .step{
-          padding:10px;
-          display:flex;
-          flex-direction:column;
-          justify-content:flex-start;
-          align-items:center;
-          text-align:center;
-          width:50%;
-          max-width:200px;
-
-        p{
-          font-family: 'Montserrat', Arial, sans-serif;
-          color:#253216;
-          height:30px;
-        }
-
-          .stepImage{
-          width:100px;
-          height:auto;
-          }
-        }
-      }
-
-      .welcomeSubtitle {
-        margin: 0;
-        padding: 0;
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-weight: 300;
-        font-size: 3rem;
-        text-align: center;
-        color:#253216;
-      }
-    }
-  }
-  
 
 
 /////////////////////////////////////
@@ -162,13 +106,15 @@
       align-items: flex-end;
       justify-content: flex-end;
       position:relative;
+
       .welcomeContainer{
         position:absolute;
        margin-top: -200px;
        width:100%;
         max-width:600px;
-      }
+      
       .welcomeHeading {
+        // color: #fff;
         color: #fff;
         font-family: 'Montserrat', Arial, sans-serif;
         font-size: 4rem;
@@ -192,57 +138,12 @@
         text-align: left;
         line-height: 1.25;
         font-family: 'Montserrat', Arial, sans-serif;
-      }
-    }
-  }
-  // .welcomeSteps{
-  //   height:100%;
-  //   // background-color: #e8ded6;
-  //     display: flex;
-  //     align-items: center;
-  //     flex-direction: column;
-  //     padding: 50px 25px 100px 25px;
-      
-  //   .welcomeWrapper{
-  //     height:100%;
-  //     flex-direction:column;
-  //     align-items:center;
-
-  //     .stepsWrapper {
-
-  //       width: 90%;
-  //       align-items:center;
-  //       justify-content:center;
-  //       .step {
-  //         width:30%;
-  //         max-width:300px;
-  //         p{
-  //           width:80%
-  //         }
-  //       }
-  //     }
-
-  //     .welcomeSubtitle{
-  //       font-size: 3rem;
-  //     }
-  //   }
-  // }
-}
+      } //closing welcomeCopy
+    }//closing welcome container
+    }//closing welcome wrapper
+  }//closing welcome
+}//closing media query
 
 
-//////////////////// IPHONE SE / 5 //////////////////////////////
-
-@media (max-width: 325px){
-    
-.welcomeSteps {
-  .welcomeWrapper {
-    .stepsWrapper {
-      .step {
-        width:100%;
-      }
-    }
-  }
-}
 
 
-}

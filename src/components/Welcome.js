@@ -1,14 +1,8 @@
 //Plant Parenthood
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import sig from "../assets/signature.png";
 import logoko from "../assets/pplogo-ko.png";
-import step1 from "../assets/step1.png";
-import step2 from "../assets/step2.png";
-import step3 from "../assets/step3.png";
-import step4 from "../assets/step4.png";
-import step5 from "../assets/step5.png";
-import step6 from "../assets/step6.png";
+
 
 class Welcome extends Component {
 
