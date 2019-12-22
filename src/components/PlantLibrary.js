@@ -1,8 +1,6 @@
 //Plant Parenthood
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import pplogo from "../assets/pplogo.png";
-import pplogoKO from "../assets/pplogoKO.png";
 
 
 // const PlantList = (props) => {
@@ -20,7 +18,7 @@ render(){
       </header>
       <section className="plantList">
         <div className="wrapper">
-        {this.props.listOfPlants.length == 0 ? (
+        {this.props.listOfPlants.length === 0 ? (
           <p className="emptyGreenhouse">
             You don't have any plants babies in your digital greenhouse yet. Start adding plants by using the + at the bottom of the screen.
           </p>

@@ -2,30 +2,22 @@
 
 import React, { Component } from 'react';
 import './styles/App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 //import our CONFIGURED firebase module
 import firebase from './components/firebase';
 
 // import components
-import Form from "./components/Form"
+import Form from "./components/Form";
 import PlantList from "./components/PlantLibrary";
 import Nav from "./components/Nav";
 import Welcome from "./components/Welcome";
 
 
-
-// kick off the polyfill! - used for back to top / smooth scrolling. 
-// smoothscroll.polyfill();
-
-//create reference to the firebase database root
-//input user id into reference to create a mini db for that usere.
-// const dbRef = firebase.database().ref(this.state.user.uid);
-
 //authentication with google/firebase
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
-// APP STARTS
 
+// APP STARTS
 class App extends Component {
   constructor() {
     super();
@@ -35,7 +27,6 @@ class App extends Component {
       user: null,
     }
   }
-
 
 //authentication
   login = () => {
@@ -57,7 +48,6 @@ class App extends Component {
       });
   }
 
-
 //modal
   openModal = (e) => {
     console.log(this)
@@ -70,15 +60,16 @@ class App extends Component {
   	  isModalOpen: false
   	})
   }
+
 //scroll
   backToTop = (e) => {
   window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
+
 //card flip
   flip = (key) => {
     document.getElementById(key).classList.toggle("flip");
   };
-
 
   componentDidMount() {
 

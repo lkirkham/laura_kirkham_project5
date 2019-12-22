@@ -1,6 +1,5 @@
 //Plant Parenthood
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import logoko from "../assets/pplogo-ko.png";
 
 
@@ -15,7 +14,7 @@ class Welcome extends Component {
 
           <div className="welcomeWrapper">
           <div className="welcomeContainer">
-          <h1 className="welcomeHeading">A digital nursery for the modern plant parent.</h1>
+          <h1 className="welcomeHeading">A Digital Nursery for the Modern Plant Parent.</h1>
           <p className="welcomeCopy">Helping you maintain the total health and wellness of your leafy fam.</p>
 
           {/* <p className="welcomeCopy">Plant Parenthood is a digital nursery that helps you manage the total health and wellbeing of your leafy little ones.</p> */}

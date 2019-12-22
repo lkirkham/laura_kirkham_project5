@@ -1,11 +1,14 @@
 //Plant Parenthood
 // firebase.js
+
 import firebase from 'firebase';
+
+const API_KEY = `${process.env.REACT_APP_FIREBASE_API_KEY}`;
 
 // Initialize Firebase
 // USE YOUR CONFIG OBJECT
 const config = {
-  apiKey: "AIzaSyBrhN_deowk4HNJ4vadtAIoP_gCn0ws2vw",
+  apiKey: API_KEY,
   authDomain: "plant-parenthood-3950f.firebaseapp.com",
   databaseURL: "https://plant-parenthood-3950f.firebaseio.com",
   projectId: "plant-parenthood-3950f",
